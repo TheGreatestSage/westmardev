@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Westmar LLC</title>
+<meta name="description" content="How Westmar LLC handles data across its iOS apps: what is collected, what is never done with it, and how to request deletion or a copy.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,300..700,0..1&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">W</span>
+      <span class="brand-name">Westmar</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#why">Why</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="mailto:nmello427@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEAD -->
+  <header class="legal-head">
+    <div class="eyebrow">LAST UPDATED: JULY 2026</div>
+    <h1>Privacy Policy</h1>
+    <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: each app collects only what it needs to work, keeps that data to itself, and none of it is ever sold or handed to advertisers.</p>
+  </header>
+
+  <!-- BODY -->
+  <main class="legal">
+
+    <h2>Who we are</h2>
+    <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, including SteerJobs, YourBPM, Voyager: Cosmic Odometer, and PaverLab.</p>
+    <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>. Messages go directly to the person who wrote the code.</p>
+    <!-- TODO: If Westmar LLC needs to list a registered business address for App Store review or GDPR/CCPA compliance, add it to the contact block at the bottom of this page. -->
+
+    <h2>What each app collects</h2>
+    <p>Westmar apps do not share a common account system. Each app collects its own data for its own purpose, and that list is specific to the app you are using.</p>
+
+    <h3>SteerJobs</h3>
+    <!-- TODO: Confirm and complete the SteerJobs data list. Likely candidates given the feature set: account email, job site photos, GPS coordinates captured at check-in, timestamps and logged hours, and job/phase records. State the retention period and where the data is stored (see the third-party services section). -->
+    <ul>
+      <li><strong>Account information</strong> — the email address used to sign in.</li>
+      <li><strong>Job site photos</strong> — images you capture to document and approve work phases.</li>
+      <li><strong>Location</strong> — GPS coordinates recorded at check-in, used to confirm presence on a job site. Location is captured only at the moment you check in, not continuously in the background.</li>
+      <li><strong>Work records</strong> — hours, phase status, and job progress you enter.</li>
+    </ul>
+
+    <h3>YourBPM</h3>
+    <!-- TODO: Confirm the YourBPM data list before launch. Key questions: does it read HealthKit heart-rate data, and if so is that data ever transmitted off-device or does it stay local? Does the music service integration (Apple Music / Spotify / other) require an OAuth token, and is that token stored on-device only? Apple requires an explicit HealthKit disclosure here. -->
+    <ul>
+      <li><strong>Heart-rate data</strong> — read from Apple Health with your permission, to match playlist tempo to your current zone.</li>
+      <li><strong>Music service connection</strong> — the authorization needed to read your library and control playback.</li>
+    </ul>
+    <p>Health data is never used for advertising, never sold, and never shared with third parties — a restriction Apple imposes on HealthKit apps and one Westmar applies as policy regardless.</p>
+
+    <h3>Voyager: Cosmic Odometer</h3>
+    <!-- TODO: Confirm. If Voyager computes motion purely from on-device sensors and location without transmitting anything, say so explicitly — it is a meaningful privacy claim and worth stating plainly. -->
+    <ul>
+      <li><strong>Location and motion</strong> — used on-device to calculate your speed and distance travelled through space.</li>
+    </ul>
+
+    <h3>PaverLab</h3>
+    <!-- TODO: Fill in once PaverLab's 1.0 feature set is locked. If it collects nothing at all, state that directly. -->
+    <p>PaverLab has not yet shipped. Its data practices will be documented here before release.</p>
+
+    <h2>Each app's data stays isolated</h2>
+    <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. Data you enter into SteerJobs is not visible to YourBPM, and nothing collected in one app is used to build a picture of you across the others.</p>
+    <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
+
+    <h2>What is never done with your data</h2>
+    <ul>
+      <li>Your data is <strong>never sold</strong>, to anyone, for any price.</li>
+      <li>Your data is <strong>never shared with advertisers</strong>, ad networks, or data brokers.</li>
+      <li>Westmar apps contain <strong>no third-party advertising SDKs</strong> and do not run behavioural ad tracking.</li>
+      <li>Your data is not used to train machine learning models.</li>
+    </ul>
+    <p>These are not aspirations subject to a future policy update — they are the operating rules across every Westmar app.</p>
+
+    <h2>Third-party services</h2>
+    <p>A small number of outside services are involved in distributing and running the apps. Each one receives only what it needs to do its job.</p>
+    <ul>
+      <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and handles any purchases. Apple provides aggregate, anonymised download and crash statistics; it does not give Westmar the identity of individual users. Apple's own privacy policy governs that data.</li>
+      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs. If you join a beta, Apple shares your email address with Westmar so the build can be delivered to you, along with crash logs and any feedback you choose to submit.</li>
+    </ul>
+    <!-- TODO: Add every remaining third-party processor and say what each receives. Fill in whichever of these apply, and delete the rest:
+         - Backend/database host (Supabase, Firebase, AWS, self-hosted?) — name it, say what is stored there and in which region.
+         - Analytics (none? TelemetryDeck? PostHog? Firebase Analytics?) — if there is NO analytics SDK in any app, say so explicitly; that is a strong and accurate claim worth making.
+         - Crash reporting beyond Apple's built-in reports (Sentry, Crashlytics?).
+         - Push notification delivery beyond Apple's APNs.
+         - Payment processing, if anything is sold outside Apple's in-app purchase system.
+         - Email/support tooling, if support mail is handled anywhere other than the Gmail address above. -->
+
+    <h2>Your rights</h2>
+    <p>Regardless of where you live, you can ask Westmar to:</p>
+    <ul>
+      <li><strong>Delete your data</strong> — have the data associated with your use of an app erased.</li>
+      <li><strong>Get a copy of your data</strong> — receive an export of what an app holds about you, in a readable format.</li>
+      <li><strong>Correct your data</strong> — fix anything inaccurate.</li>
+    </ul>
+    <p>Email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> with the app name in the subject line. Requests are answered within 30 days, and usually much sooner.</p>
+    <!-- TODO: If Westmar knowingly serves users in the EU/UK (GDPR) or California (CCPA/CPRA), this section should also name the legal basis for processing, the right to object, and the right to lodge a complaint with a supervisory authority. Worth a lawyer's review before making those specific claims. -->
+
+    <h2>Children's privacy</h2>
+    <p>Westmar apps are not directed at children under 13, and Westmar does not knowingly collect personal information from anyone under 13. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and it will be deleted promptly.</p>
+    <!-- TODO: Confirm each app's App Store age rating matches this claim. If any app is ever rated 4+ and marketed to children, it falls under COPPA and Apple's Kids Category rules, which require stricter handling than this section describes. -->
+
+    <h2>Security</h2>
+    <p>Data is protected with industry-standard measures appropriate to its sensitivity, including encryption in transit. No system is perfectly secure, and no absolute guarantee is offered — but the amount of data collected is deliberately kept small, which is the most effective protection available.</p>
+    <!-- TODO: Once the backend is finalised, describe the actual controls: encryption at rest, access controls, and how a breach would be disclosed. Several US states have specific breach-notification deadlines. -->
+
+    <h2>Changes to this policy</h2>
+    <p>When this policy changes, the "Last updated" date at the top of this page changes with it. Material changes — anything that meaningfully affects what is collected or how it is used — will additionally be announced through an in-app notice or an email to affected users before the change takes effect.</p>
+    <p>Previous versions are available on request. Continuing to use a Westmar app after a change takes effect means the revised policy applies to you.</p>
+
+    <h2>Contact</h2>
+    <p>Privacy questions, deletion requests, and data exports all go to the same place:</p>
+    <address>
+      <span class="legal-address-name">Westmar LLC</span>
+      Attn: Nicholas Mello<br>
+      <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>
+      <!-- TODO: Add mailing address here if one is required for App Store review or for GDPR/CCPA compliance. -->
+    </address>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-sm" aria-hidden="true">W</span>
+      © 2026 Westmar LLC
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:nmello427@gmail.com">Contact</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
