@@ -1,6 +1,6 @@
 # westmardev
 
-Marketing site for **Westmar LLC** — a static, dependency-free build of the
+Marketing site for **WestMar LLC** — a static, dependency-free build of the
 `Westmar.dc.html` design from Claude Design.
 
 ## Files

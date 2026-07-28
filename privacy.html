@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Westmar LLC</title>
-<meta name="description" content="How Westmar LLC handles data across its iOS apps: what is collected, what is never done with it, and how to request deletion or a copy.">
+<title>Privacy Policy — WestMar LLC</title>
+<meta name="description" content="How WestMar LLC handles data across its iOS apps: what each app collects, what leaves your device, and how to request deletion or a copy.">
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
   <nav class="nav">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">W</span>
-      <span class="brand-name">Westmar</span>
+      <span class="brand-name">WestMar</span>
     </a>
     <div class="nav-links">
       <a href="index.html#apps">Apps</a>
@@ -31,105 +31,122 @@
 
   <!-- PAGE HEAD -->
   <header class="legal-head">
-    <div class="eyebrow">LAST UPDATED: JULY 2026</div>
+    <div class="eyebrow">LAST UPDATED: 28 JULY 2026</div>
     <h1>Privacy Policy</h1>
-    <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: each app collects only what it needs to work, keeps that data to itself, and none of it is ever sold or handed to advertisers.</p>
+    <p class="legal-lede">This policy covers every app published by WestMar LLC. The short version: each app collects only what it needs to work, no app contains an analytics or advertising SDK, and none of your data is ever sold.</p>
   </header>
 
   <!-- BODY -->
   <main class="legal">
 
     <h2>Who we are</h2>
-    <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, including SteerJobs, YourBPM, Voyager: Cosmic Odometer, and PaverLab.</p>
+    <p>WestMar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. WestMar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, and YourBPM.</p>
     <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>. Messages go directly to the person who wrote the code.</p>
-    <!-- TODO: If Westmar LLC needs to list a registered business address for App Store review or GDPR/CCPA compliance, add it to the contact block at the bottom of this page. -->
 
     <h2>What each app collects</h2>
-    <p>Westmar apps do not share a common account system. Each app collects its own data for its own purpose, and that list is specific to the app you are using.</p>
+    <p>WestMar apps do not share a common account system. Each app collects its own data for its own purpose, and that list is specific to the app you are using.</p>
 
     <h3>SteerJobs</h3>
-    <!-- TODO: Confirm and complete the SteerJobs data list. Likely candidates given the feature set: account email, job site photos, GPS coordinates captured at check-in, timestamps and logged hours, and job/phase records. State the retention period and where the data is stored (see the third-party services section). -->
+    <p>SteerJobs is a business tool, not a personal one. It is bought by a construction company and used by that company's crew, and the company can see what its crew submits. That is the point of the product, and you should know it before you use it.</p>
     <ul>
-      <li><strong>Account information</strong> — the email address used to sign in.</li>
-      <li><strong>Job site photos</strong> — images you capture to document and approve work phases.</li>
-      <li><strong>Location</strong> — GPS coordinates recorded at check-in, used to confirm presence on a job site. Location is captured only at the moment you check in, not continuously in the background.</li>
-      <li><strong>Work records</strong> — hours, phase status, and job progress you enter.</li>
+      <li><strong>Account information</strong> — the email address used to sign in, and the company you belong to.</li>
+      <li><strong>Job site photos</strong> — images you capture to document work phases. A company admin reviews and approves each phase, so admins see the photos crew members submit.</li>
+      <li><strong>Job documents and resumes</strong> — files uploaded to a job or a personnel record.</li>
+      <li><strong>Check-in location</strong> — GPS coordinates recorded at the moment you check in, used to confirm presence on a job site. Location is captured at check-in only. SteerJobs does not track your location in the background or between check-ins.</li>
+      <li><strong>Hours and work records</strong> — hours logged per user per job, phase status, and job progress. Company admins can see weekly hours per user per job.</li>
     </ul>
-
-    <h3>YourBPM</h3>
-    <!-- TODO: Confirm the YourBPM data list before launch. Key questions: does it read HealthKit heart-rate data, and if so is that data ever transmitted off-device or does it stay local? Does the music service integration (Apple Music / Spotify / other) require an OAuth token, and is that token stored on-device only? Apple requires an explicit HealthKit disclosure here. -->
-    <ul>
-      <li><strong>Heart-rate data</strong> — read from Apple Health with your permission, to match playlist tempo to your current zone.</li>
-      <li><strong>Music service connection</strong> — the authorization needed to read your library and control playback.</li>
-    </ul>
-    <p>Health data is never used for advertising, never sold, and never shared with third parties — a restriction Apple imposes on HealthKit apps and one Westmar applies as policy regardless.</p>
+    <p>All of it is stored in Supabase, in the United States (us-east-1). Photos, job documents, and resumes live in storage buckets scoped to a single company. Every database table enforces row-level security keyed on company ID, so visibility ends at the company boundary — one company can never see another company's data.</p>
+    <p><strong>How long it is kept:</strong> job and photo records are retained for as long as the company's account is active, because a construction record is worth little if it disappears mid-project. There is no automatic purge. Data is deleted when you or your company asks, within 30 days of the request.</p>
 
     <h3>Voyager: Cosmic Odometer</h3>
-    <!-- TODO: Confirm. If Voyager computes motion purely from on-device sensors and location without transmitting anything, say so explicitly — it is a meaningful privacy claim and worth stating plainly. -->
+    <p>Voyager calculates how fast you are moving through the universe. That math needs your latitude, because the Earth-rotation component of your speed depends on how far you are from the equator.</p>
     <ul>
-      <li><strong>Location and motion</strong> — used on-device to calculate your speed and distance travelled through space.</li>
+      <li><strong>Coarse latitude</strong> — requested once, at an accuracy of roughly three kilometres. Voyager asks for "when in use" location permission, takes a single reading, keeps only the latitude number, and discards the rest.</li>
     </ul>
+    <p>That latitude never leaves your phone. Voyager has no networking code of any kind — there is no server for it to send anything to. Decline the location prompt and the app still works; it falls back to a default latitude and every other feature behaves normally.</p>
+    <p>Voyager offers a one-time $2.99 Pro unlock through Apple's in-app purchase system. Apple processes the payment and tells the app whether you own it. WestMar never sees your payment details.</p>
 
-    <h3>PaverLab</h3>
-    <!-- TODO: Fill in once PaverLab's 1.0 feature set is locked. If it collects nothing at all, state that directly. -->
-    <p>PaverLab has not yet shipped. Its data practices will be documented here before release.</p>
+    <h3>YourBPM</h3>
+    <p>YourBPM has not been released. There is no public build, no server, and no user data. When it ships, this section will describe exactly what it reads — including any Apple Health access — and that description will be published here before the app is available to anyone.</p>
+
+    <h2>No analytics. No ads. No tracking.</h2>
+    <p>This is worth stating flatly rather than burying in a list: <strong>no WestMar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No WestMar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
+    <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
 
     <h2>Each app's data stays isolated</h2>
-    <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. Data you enter into SteerJobs is not visible to YourBPM, and nothing collected in one app is used to build a picture of you across the others.</p>
+    <p>WestMar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. Nothing collected in one app is used to build a picture of you across the others.</p>
     <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
 
     <h2>What is never done with your data</h2>
     <ul>
       <li>Your data is <strong>never sold</strong>, to anyone, for any price.</li>
       <li>Your data is <strong>never shared with advertisers</strong>, ad networks, or data brokers.</li>
-      <li>Westmar apps contain <strong>no third-party advertising SDKs</strong> and do not run behavioural ad tracking.</li>
-      <li>Your data is not used to train machine learning models.</li>
+      <li>Your data is <strong>never used to train machine learning models</strong>.</li>
+      <li>Your job site photos are never used for marketing, case studies, or App Store screenshots without your written permission.</li>
     </ul>
-    <p>These are not aspirations subject to a future policy update — they are the operating rules across every Westmar app.</p>
+    <p>These are not aspirations subject to a future policy update — they are the operating rules across every WestMar app.</p>
 
     <h2>Third-party services</h2>
-    <p>A small number of outside services are involved in distributing and running the apps. Each one receives only what it needs to do its job.</p>
+    <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job.</p>
     <ul>
-      <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and handles any purchases. Apple provides aggregate, anonymised download and crash statistics; it does not give Westmar the identity of individual users. Apple's own privacy policy governs that data.</li>
-      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs. If you join a beta, Apple shares your email address with Westmar so the build can be delivered to you, along with crash logs and any feedback you choose to submit.</li>
+      <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell WestMar who individual users are. Apple's own privacy policy governs that data.</li>
+      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs. If you join a beta, Apple shares your email address with WestMar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
+      <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on WestMar's instructions.</li>
+      <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; WestMar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
+      <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
     </ul>
-    <!-- TODO: Add every remaining third-party processor and say what each receives. Fill in whichever of these apply, and delete the rest:
-         - Backend/database host (Supabase, Firebase, AWS, self-hosted?) — name it, say what is stored there and in which region.
-         - Analytics (none? TelemetryDeck? PostHog? Firebase Analytics?) — if there is NO analytics SDK in any app, say so explicitly; that is a strong and accurate claim worth making.
-         - Crash reporting beyond Apple's built-in reports (Sentry, Crashlytics?).
-         - Push notification delivery beyond Apple's APNs.
-         - Payment processing, if anything is sold outside Apple's in-app purchase system.
-         - Email/support tooling, if support mail is handled anywhere other than the Gmail address above. -->
 
     <h2>Your rights</h2>
-    <p>Regardless of where you live, you can ask Westmar to:</p>
+    <p>Wherever you live, you can ask WestMar to:</p>
     <ul>
       <li><strong>Delete your data</strong> — have the data associated with your use of an app erased.</li>
       <li><strong>Get a copy of your data</strong> — receive an export of what an app holds about you, in a readable format.</li>
       <li><strong>Correct your data</strong> — fix anything inaccurate.</li>
     </ul>
-    <p>Email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> with the app name in the subject line. Requests are answered within 30 days, and usually much sooner.</p>
-    <!-- TODO: If Westmar knowingly serves users in the EU/UK (GDPR) or California (CCPA/CPRA), this section should also name the legal basis for processing, the right to object, and the right to lodge a complaint with a supervisory authority. Worth a lawyer's review before making those specific claims. -->
+    <p>Email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
+    <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, WestMar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
+
+    <h2>California privacy rights (CCPA/CPRA)</h2>
+    <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>.</p>
+    <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), and professional information (hours and job records). They are collected to operate the apps, and for no other purpose.</p>
+    <p><strong>WestMar does not sell personal information and does not share it for cross-context behavioural advertising.</strong> That has never happened and there is no mechanism in any app that could make it happen — there is no advertising SDK to send it to. Because nothing is sold or shared in that sense, there is no "Do Not Sell or Share My Personal Information" link to offer. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
+
+    <h2>UK and European privacy rights (GDPR)</h2>
+    <p>If you are in the United Kingdom or the European Economic Area, WestMar LLC is the data controller for the data described in this policy.</p>
+    <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between WestMar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse.</p>
+    <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and are answered within 30 days.</p>
+    <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of WestMar's agreement with Supabase.</p>
+    <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with WestMar first is welcome but not required.</p>
+    <p><strong>EU representative.</strong> WestMar has not appointed an Article 27 representative in the EU or UK. WestMar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
 
     <h2>Children's privacy</h2>
-    <p>Westmar apps are not directed at children under 13, and Westmar does not knowingly collect personal information from anyone under 13. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and it will be deleted promptly.</p>
-    <!-- TODO: Confirm each app's App Store age rating matches this claim. If any app is ever rated 4+ and marketed to children, it falls under COPPA and Apple's Kids Category rules, which require stricter handling than this section describes. -->
+    <p>No WestMar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content.</p>
+    <p>WestMar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a WestMar app, email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and it will be deleted promptly.</p>
 
     <h2>Security</h2>
-    <p>Data is protected with industry-standard measures appropriate to its sensitivity, including encryption in transit. No system is perfectly secure, and no absolute guarantee is offered — but the amount of data collected is deliberately kept small, which is the most effective protection available.</p>
-    <!-- TODO: Once the backend is finalised, describe the actual controls: encryption at rest, access controls, and how a breach would be disclosed. Several US states have specific breach-notification deadlines. -->
+    <p>What is actually in place, stated without embellishment:</p>
+    <ul>
+      <li>All data in transit is encrypted with TLS.</li>
+      <li>Data at rest in Supabase is encrypted using Supabase's platform encryption.</li>
+      <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
+      <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
+    </ul>
+    <p>What is deliberately <em>not</em> claimed: WestMar holds no SOC 2 certification, has not commissioned a third-party penetration test, and does not use end-to-end encryption. No system is perfectly secure. The most effective protection here is that very little is collected in the first place.</p>
+    <p>If a breach affects your data, you will be told by email, and the relevant regulators will be notified within the deadlines the law sets — 72 hours under GDPR, and whatever the applicable US state law requires.</p>
 
     <h2>Changes to this policy</h2>
     <p>When this policy changes, the "Last updated" date at the top of this page changes with it. Material changes — anything that meaningfully affects what is collected or how it is used — will additionally be announced through an in-app notice or an email to affected users before the change takes effect.</p>
-    <p>Previous versions are available on request. Continuing to use a Westmar app after a change takes effect means the revised policy applies to you.</p>
+    <p>Previous versions are available on request. Continuing to use a WestMar app after a change takes effect means the revised policy applies to you.</p>
 
     <h2>Contact</h2>
     <p>Privacy questions, deletion requests, and data exports all go to the same place:</p>
     <address>
-      <span class="legal-address-name">Westmar LLC</span>
+      <span class="legal-address-name">WestMar LLC</span>
       Attn: Nicholas Mello<br>
+      506 Park Dr.<br>
+      Bradenton, FL 34209<br>
+      United States<br>
       <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>
-      <!-- TODO: Add mailing address here if one is required for App Store review or for GDPR/CCPA compliance. -->
     </address>
 
   </main>
@@ -138,7 +155,7 @@
   <footer class="footer">
     <div class="footer-brand">
       <span class="brand-mark brand-mark-sm" aria-hidden="true">W</span>
-      © 2026 Westmar LLC
+      © 2026 WestMar LLC
     </div>
     <div class="footer-links">
       <a href="privacy.html" aria-current="page">Privacy</a>
