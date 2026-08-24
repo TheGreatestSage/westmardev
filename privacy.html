@@ -31,7 +31,7 @@
 
   <!-- PAGE HEAD -->
   <header class="legal-head">
-    <div class="eyebrow">LAST UPDATED: 28 JULY 2026</div>
+    <div class="eyebrow">LAST UPDATED: 24 AUGUST 2026</div>
     <h1>Privacy Policy</h1>
     <p class="legal-lede">This policy covers every app published by WestMar LLC. The short version: each app collects only what it needs to work, no app contains an analytics or advertising SDK, and none of your data is ever sold.</p>
   </header>
@@ -40,7 +40,7 @@
   <main class="legal">
 
     <h2>Who we are</h2>
-    <p>WestMar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. WestMar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, and YourBPM.</p>
+    <p>WestMar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. WestMar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, YourBPM, and ShiftJar.</p>
     <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>. Messages go directly to the person who wrote the code.</p>
 
     <h2>What each app collects</h2>
@@ -69,12 +69,22 @@
     <h3>YourBPM</h3>
     <p>YourBPM has not been released. There is no public build, no server, and no user data. When it ships, this section will describe exactly what it reads — including any Apple Health access — and that description will be published here before the app is available to anyone.</p>
 
+    <h3>ShiftJar</h3>
+    <p>ShiftJar is a tip tracker for restaurant servers and bartenders. It has no account system, no login, and no WestMar server behind it.</p>
+    <ul>
+      <li><strong>Shift records</strong> — tips, hours, tip-outs, job name, and any notes you add. Entered by you, stored on your device.</li>
+    </ul>
+    <p>If you are signed into iCloud, shift records sync through Apple's CloudKit to your private iCloud database — the part of iCloud only your Apple ID can reach. WestMar cannot see, query, or retrieve it; Apple's infrastructure moves it between your own devices. With iCloud off, ShiftJar stores everything locally and works fully offline.</p>
+    <p>CSV export is user-initiated: the file is generated on your device and goes only where you choose to send it.</p>
+    <p><strong>How long it is kept:</strong> as long as you keep it. Data lives on your device and in your iCloud, not with WestMar. Deleting the app removes its local data; iCloud copies can be removed from iOS Settings or within the app.</p>
+    <p>Because WestMar holds no ShiftJar data, there is nothing for WestMar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+
     <h2>No analytics. No ads. No tracking.</h2>
     <p>This is worth stating flatly rather than burying in a list: <strong>no WestMar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No WestMar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
     <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
 
     <h2>Each app's data stays isolated</h2>
-    <p>WestMar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. Nothing collected in one app is used to build a picture of you across the others.</p>
+    <p>WestMar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar has no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
     <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
 
     <h2>What is never done with your data</h2>
@@ -90,7 +100,8 @@
     <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job.</p>
     <ul>
       <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell WestMar who individual users are. Apple's own privacy policy governs that data.</li>
-      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs. If you join a beta, Apple shares your email address with WestMar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
+      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs and ShiftJar. If you join a beta, Apple shares your email address with WestMar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
+      <li><strong>Apple iCloud (CloudKit)</strong> — syncs ShiftJar data between your devices through your Apple ID's private database. Apple hosts it under your account; WestMar has no access to its contents.</li>
       <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on WestMar's instructions.</li>
       <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; WestMar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
       <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
@@ -105,22 +116,23 @@
     </ul>
     <p>Email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
     <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, WestMar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
+    <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone.</p>
 
     <h2>California privacy rights (CCPA/CPRA)</h2>
     <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a>.</p>
-    <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), and professional information (hours and job records). They are collected to operate the apps, and for no other purpose.</p>
+    <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), professional information (hours and job records), and financial information (ShiftJar shift and tip records, which stay on your device and in your private iCloud and never reach WestMar's systems). They are collected to operate the apps, and for no other purpose.</p>
     <p><strong>WestMar does not sell personal information and does not share it for cross-context behavioural advertising.</strong> That has never happened and there is no mechanism in any app that could make it happen — there is no advertising SDK to send it to. Because nothing is sold or shared in that sense, there is no "Do Not Sell or Share My Personal Information" link to offer. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
 
     <h2>UK and European privacy rights (GDPR)</h2>
     <p>If you are in the United Kingdom or the European Economic Area, WestMar LLC is the data controller for the data described in this policy.</p>
-    <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between WestMar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse.</p>
+    <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between WestMar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud; WestMar never receives them, so there is no WestMar processing to base.</p>
     <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and are answered within 30 days.</p>
     <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of WestMar's agreement with Supabase.</p>
     <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with WestMar first is welcome but not required.</p>
     <p><strong>EU representative.</strong> WestMar has not appointed an Article 27 representative in the EU or UK. WestMar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
 
     <h2>Children's privacy</h2>
-    <p>No WestMar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content.</p>
+    <p>No WestMar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content.</p>
     <p>WestMar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a WestMar app, email <a href="mailto:nmello427@gmail.com">nmello427@gmail.com</a> and it will be deleted promptly.</p>
 
     <h2>Security</h2>
@@ -128,6 +140,7 @@
     <ul>
       <li>All data in transit is encrypted with TLS.</li>
       <li>Data at rest in Supabase is encrypted using Supabase's platform encryption.</li>
+      <li>ShiftJar data in iCloud is encrypted in transit and at rest under Apple's CloudKit security model, inside your personal Apple ID account.</li>
       <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
       <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
     </ul>
