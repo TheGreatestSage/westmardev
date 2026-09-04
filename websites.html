@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Websites for contractors — WestMar LLC</title>
+<meta name="description" content="Flat-price websites for contractors. $1,000 landing page, $3,000 full site, custom builds. Hosting and updates $99/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F2;
+    --ink:#1B2230;
+    --steel:#2C4A6E;
+    --orange:#E4611B;
+    --grey:#6F7681;
+    --rule:#D8D6CF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;color-scheme:only light;background:#F7F6F2 !important}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:"Barlow",system-ui,sans-serif;background:#F7F6F2 !important;color:#1B2230 !important;line-height:1.5;font-size:17px}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:2px solid var(--ink)}
+  .logo{font-family:"Barlow Condensed";font-weight:700;font-size:26px;letter-spacing:.5px;text-decoration:none}
+  .logo span{color:var(--orange)}
+  nav a.call{font-weight:600;text-decoration:none;border:2px solid var(--ink);padding:8px 14px;border-radius:3px}
+
+  /* hero */
+  header.hero{padding:56px 0 40px}
+  h1{font-family:"Barlow Condensed";font-weight:700;font-size:clamp(46px,9vw,96px);line-height:.95;letter-spacing:-.5px;max-width:14ch}
+  .hero p{margin-top:22px;font-size:20px;max-width:46ch;color:var(--grey)}
+  .hero p b{color:var(--ink);font-weight:600}
+  .stripe{height:10px;background:repeating-linear-gradient(-45deg,var(--orange) 0 14px,var(--ink) 14px 28px);margin:36px 0 0}
+
+  /* estimate */
+  section{padding:48px 0}
+  h2{font-family:"Barlow Condensed";font-weight:700;font-size:clamp(34px,5vw,48px);line-height:1;margin-bottom:8px}
+  .lede{color:var(--grey);max-width:52ch;margin-bottom:28px}
+  .estimate{border:2px solid var(--ink);background:#fff}
+  .est-head{display:grid;grid-template-columns:1fr auto;padding:14px 18px;border-bottom:2px solid var(--ink);font-family:"Barlow Condensed";font-weight:700;font-size:18px}
+  .row{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:20px 18px;border-bottom:1px solid var(--rule);align-items:start}
+  .row:last-child{border-bottom:0}
+  .row.pick{background:#FFF4EC;border-left:6px solid var(--orange)}
+  .row h3{font-family:"Barlow Condensed";font-weight:700;font-size:28px;line-height:1}
+  .row .price{font-family:"Barlow Condensed";font-weight:700;font-size:32px;line-height:1;text-align:right;white-space:nowrap}
+  .row .sub{color:var(--grey);font-size:15px}
+  .row ul{grid-column:1/-1;list-style:none;margin-top:6px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px}
+  .row ul li::before{content:"✓ ";color:var(--orange);font-weight:700}
+  .row .tag{grid-column:1/-1;font-size:13px;font-weight:600;color:var(--orange)}
+  .est-foot{background:var(--ink);color:#fff;padding:22px 18px;display:grid;gap:6px}
+  .est-foot .big{font-family:"Barlow Condensed";font-weight:700;font-size:30px;line-height:1.05}
+  .est-foot .big em{color:var(--orange);font-style:normal}
+  .est-foot p{font-size:15px;opacity:.85;max-width:60ch}
+  .note{margin-top:14px;font-size:14px;color:var(--grey);max-width:60ch}
+
+  /* portfolio */
+  .work{display:grid;gap:18px}
+  @media(min-width:700px){.work{grid-template-columns:1fr 1fr}}
+  .job{border:2px solid var(--ink);background:#fff;padding:18px;text-decoration:none;display:block}
+  .job .shot{aspect-ratio:16/10;background:linear-gradient(160deg,var(--steel),#183050);border:1px solid var(--ink);margin-bottom:14px;position:relative;overflow:hidden}
+  .job .shot::after{content:attr(data-url);position:absolute;left:12px;bottom:10px;color:#fff;font-family:"Barlow Condensed";font-size:20px;font-weight:700;opacity:.9}
+  .job .shot.b{background:linear-gradient(160deg,#4a5a45,#25301F)}
+  .job h3{font-family:"Barlow Condensed";font-weight:700;font-size:26px;line-height:1}
+  .job p{color:var(--grey);font-size:15px;margin-top:4px}
+  .job .lvl{font-weight:600;font-size:14px;margin-top:8px}
+
+  /* care */
+  .care{display:grid;gap:10px 28px}
+  @media(min-width:700px){.care{grid-template-columns:1fr 1fr}}
+  .care div{padding:12px 0;border-top:1px solid var(--rule)}
+  .care strong{display:block;font-weight:600}
+  .care span{color:var(--grey);font-size:15px}
+
+  /* close */
+  .close{background:var(--ink);color:#fff;padding:56px 0}
+  .close h2{max-width:16ch}
+  .close p{opacity:.85;max-width:50ch;margin:12px 0 26px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-family:"Barlow Condensed";font-weight:700;font-size:22px;text-decoration:none;padding:14px 22px;border-radius:3px;border:2px solid var(--orange)}
+  .btn.fill{background:var(--orange);color:#fff}
+  .btn.line{color:#fff}
+  footer{padding:24px 0;font-size:14px;color:var(--grey)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="index.html">WESTMAR<span>.</span></a>
+    <a class="call" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Websites for contractors who'd rather be on the job.</h1>
+    <p>Built for trades. <b>You send photos and a few sentences. We handle the rest.</b></p>
+  </header>
+</div>
+<div class="stripe"></div>
+
+<div class="wrap">
+  <section id="pricing">
+    <h2>The estimate.</h2>
+    <p class="lede">Flat prices, written down up front. Same way you'd want it from a sub.</p>
+
+    <div class="estimate">
+      <div class="est-head"><span>Website build</span><span>One-time</span></div>
+
+      <div class="row">
+        <h3>Landing page</h3>
+        <div class="price">$1,000</div>
+        <div class="sub">One page. Get found, get called.</div>
+        <ul><li>Click-to-call</li><li>Contact form</li><li>Google Business link</li><li>Live in 3 weeks</li></ul>
+      </div>
+
+      <div class="row pick">
+        <div class="tag">Most contractors land here</div>
+        <h3>Full site</h3>
+        <div class="price">$3,000</div>
+        <div class="sub">Up to five pages. Show the work, post it yourself.</div>
+        <ul><li>Service and area pages</li><li>Filterable project gallery</li><li>Individual project pages</li><li>Quote request with photo upload</li><li>Admin panel</li></ul>
+      </div>
+
+      <div class="row">
+        <h3>Custom</h3>
+        <div class="price">$5,000+</div>
+        <div class="sub">Booking, customer portals, integrations. Whatever the job needs.</div>
+      </div>
+
+      <div class="est-foot">
+        <div class="big">Hosting and updates: <em>$99 / month</em></div>
+        <p>Two hours of changes each month, security patches, backups, uptime monitoring. Plus two months of SteerJobs free once your site launches.</p>
+      </div>
+    </div>
+    <p class="note">Custom builds are quoted $199–$299/month at signing. Site care runs on a 24-month term. Extra work is $100/hour.</p>
+  </section>
+
+  <section id="work">
+    <h2>Recent work.</h2>
+    <p class="lede">Real sites, real jobs. Tap one and use it like a customer would.</p>
+    <div class="work">
+      <a class="job" href="https://wildremodeling.com">
+        <div class="shot" data-url="wildremodeling.com"></div>
+        <h3>Wild Remodeling</h3>
+        <p>Kitchen, bath, and whole-home remodeler. Filterable gallery, project pages, quote requests with photo upload.</p>
+        <div class="lvl">Full site build</div>
+      </a>
+      <a class="job" href="https://steerjobs.com">
+        <div class="shot b" data-url="steerjobs.com"></div>
+        <h3>SteerJobs</h3>
+        <p>Job-phase tracking software for construction crews. Photo-verified phases, GPS check-in, customer progress page.</p>
+        <div class="lvl">Custom build — we build software too</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="care">
+    <h2>What $99 covers.</h2>
+    <div class="care">
+      <div><strong>Hosting and SSL</strong><span>Fast, secure, always on.</span></div>
+      <div><strong>Two hours of edits monthly</strong><span>New photos, price changes, a fresh review. Text it over.</span></div>
+      <div><strong>Backups and patches</strong><span>Daily backups. Security updates handled.</span></div>
+      <div><strong>Uptime monitoring</strong><span>If it goes down, we know before you do.</span></div>
+      <div><strong>Domain renewal</strong><span>Handled and billed at cost.</span></div>
+      <div><strong>Email support</strong><span>Reply within two business days.</span></div>
+    </div>
+    <p class="note">Not included: new pages, redesigns, logos, ads, SEO campaigns. Those are quoted separately.</p>
+  </section>
+</div>
+
+<div class="close">
+  <div class="wrap">
+    <h2>Not sure you need a site?</h2>
+    <p>Send a note. We'll tell you straight whether you need a website or just a better Google listing.</p>
+    <div class="btns">
+      <a class="btn fill" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
+      <a class="btn line" href="mailto:hello@westmardev.com">Email</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap"><footer>© 2026 WestMar LLC · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer></div>
+
+</body>
+</html>
