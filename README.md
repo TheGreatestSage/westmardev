@@ -12,6 +12,7 @@ Marketing site for **Westmar LLC** — a static, dependency-free build of the
 | `support.html`, `privacy.html`, `terms.html` | Support and legal pages |
 | `styles.css` | All styling and design tokens, shared by every page |
 | `app.js` | Theme toggle and FAQ accordion |
+| `favicon.svg`, `apple-touch-icon.png` | Site icons — the W is the Anybody 900 outline as a path (no font needed) |
 
 No build step, no dependencies. Fonts (Anybody for the wordmark and display
 caps, Archivo for body text) load from Google Fonts; icons are inline SVGs.
