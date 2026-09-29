@@ -1,18 +1,20 @@
 # westmardev
 
-Marketing site for **WestMar LLC** — a static, dependency-free build of the
-`Westmar.dc.html` design from Claude Design.
+Marketing site for **Westmar LLC** — a static, dependency-free build of the
+"WESTMAR site redesign" boards from Claude Design (Main = light, Dark = dark).
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Full page markup — nav, hero, app showcase, why, FAQ, CTA, footer |
-| `styles.css` | All styling and design tokens (the design's inline styles, extracted) |
-| `app.js` | FAQ accordion behavior |
+| `index.html` | Home — header, hero, lanes, apps lineup, proof band, FAQ, CTA, footer |
+| `websites.html` | Websites for contractors — pricing, recent work, site care |
+| `support.html`, `privacy.html`, `terms.html` | Support and legal pages |
+| `styles.css` | All styling and design tokens, shared by every page |
+| `app.js` | Theme toggle and FAQ accordion |
 
-No build step, no dependencies. Fonts (Space Grotesk, IBM Plex Mono, Material
-Symbols Rounded) load from Google Fonts.
+No build step, no dependencies. Fonts (Anybody for the wordmark and display
+caps, Archivo for body text) load from Google Fonts; icons are inline SVGs.
 
 ## Run locally
 
@@ -21,35 +23,36 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-Opening `index.html` directly also works.
-
 ## Theming
 
-The design exposes one knob: the accent color. Change `--accent` in
-`styles.css`:
+Colors are CSS custom properties at the top of `styles.css`. Light is the
+default for everyone, regardless of OS setting. Dark mode overrides the same
+tokens under `[data-theme="dark"]` on `<html>`:
 
-```css
-:root { --accent: #7cc4ff; }  /* alternates: #4ade80, #fbbf24, #a78bfa */
-```
+| Token | Light | Dark |
+| --- | --- | --- |
+| `--bg` | `#FFFFFF` | `#000000` |
+| `--band` | `#F2F2F0` | `#121212` |
+| `--ink` (headings, 2px rules) | `#000000` | `#FFFFFF` |
+| `--text` | `#262626` | `#E6E6E6` |
+| `--body` | `#3D3D3D` | `#B5B5B5` |
+| `--muted` | `#5E5E5E` | `#A3A3A3` |
+| `--rule` | `#D9D9D9` | `#2B2B2B` |
+| `--red` / `--red-hover` (fills) | `#C72020` / `#A51A1A` | same |
+| `--red-text` (red type) | `#C72020` | `#D35151` |
+| `--inverse` (inverse blocks) | `#000000` | `#FFFFFF` |
+
+The header toggle stores the choice in `localStorage` (`theme`). Each page
+has a one-line inline script in `<head>`, before the stylesheets, that
+re-applies a saved dark choice so dark mode never flashes on load.
 
 ## Editing content
 
-Apps, proof points, and FAQ entries are plain markup in `index.html` — the
-design's `sc-for` loops are expanded inline. Each app card sets its icon
-gradient and status color through two custom properties:
-
-```html
-<article class="app-card" style="--icon-bg:linear-gradient(...);--status-color:#fbbf24">
-```
-
-Icon names are [Material Symbols Rounded](https://fonts.google.com/icons) ligatures.
+Apps, proof points, FAQ entries, pricing tiers and portfolio items are plain
+markup. App status pills are `pill-beta`, `pill-dev` or `pill-soon`. The
+TradeKit row in `index.html` is commented out until its copy exists.
 
 ## Deploying
 
 Any static host works. For GitHub Pages: **Settings → Pages → Deploy from
 branch → `main` / root**.
-
-## Source design
-
-[Westmar.dc.html](https://claude.ai/design/p/e19056e0-9693-4901-9041-fb01a8aab711?file=Westmar.dc.html)
-— keep it in sync by hand; there is no automated codegen from the `.dc.html`.

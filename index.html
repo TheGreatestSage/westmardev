@@ -3,269 +3,225 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WestMar LLC — One developer. Seven apps in flight.</title>
-<meta name="description" content="WestMar LLC is Nicholas Mello — building native iOS apps that solve one problem each, then shipping them. No committee. No roadmap theater.">
-<meta name="color-scheme" content="dark">
+<title>Westmar LLC — One developer. Seven apps in flight.</title>
+<meta name="description" content="Westmar LLC is Nicholas Mello — building native iOS apps that solve one problem each, then shipping them. No committee. No roadmap theater.">
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,300..700,0..1&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125..150,800..900&family=Archivo:wght@400..700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="wrap">
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">W</span>
-      <span class="brand-name">WestMar</span>
-    </a>
-    <div class="nav-links">
-      <a href="#apps">Apps</a>
-      <a href="websites.html">Websites</a>
-      <a href="#why">Why</a>
-      <a href="#faq">FAQ</a>
-      <a class="nav-cta" href="mailto:hello@westmardev.com">Contact</a>
+<!-- HEADER -->
+<header class="site-header shell">
+  <a class="wordmark" href="#top" aria-label="Westmar LLC home">
+    <span class="wordmark-name">Westmar</span>
+    <span class="wordmark-llc">LLC</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a class="nav-link" href="#apps">Apps</a>
+    <a class="nav-link" href="#websites">Websites</a>
+    <a class="nav-link" href="#faq">FAQ</a>
+    <a class="nav-link" href="support.html">Support</a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Dark mode">
+        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <a class="btn btn-inverse" href="mailto:hello@westmardev.com">Contact</a>
     </div>
   </nav>
+</header>
+
+<main id="main">
 
   <!-- HERO -->
-  <header class="hero" id="top">
-    <div class="badge">
-      <span class="badge-dot" aria-hidden="true"></span>
-      7 APPS IN FLIGHT · iOS
-    </div>
-    <h1>One developer.<br>Seven apps in flight.</h1>
-    <p class="hero-sub">WestMar LLC is a Mello family company. The Mello brothers build the apps — design, engineering, and support, one problem at a time. No committee. No roadmap theater.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#apps">See the apps</a>
-      <a class="btn btn-ghost" href="websites.html">Websites for contractors</a>
-    </div>
-  </header>
-
-  <!-- APPS -->
-  <section id="apps" class="section">
-    <div class="eyebrow">THE APPS</div>
-    <h2>Built one at a time.<br><span class="muted">Finished every time.</span></h2>
-    <div class="app-grid">
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#fbbf24,#f59e0b);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">photo_camera</span></div>
-          <span class="app-status">BETA · TESTFLIGHT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>SteerJobs</h3>
-          <p>Construction phases locked until the photo says approved. GPS check-in, hours, and a progress map for every job.</p>
-        </div>
-        <a class="app-link" href="https://steerjobs.com">
-          <span>steerjobs.com</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#34d399,#059669);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">savings</span></div>
-          <span class="app-status">BETA · TESTFLIGHT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>ShiftJar</h3>
-          <p>Tip tracker for servers and bartenders. Log a shift in seconds — tips, hours, tip-outs — and see your real take-home.</p>
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=ShiftJar">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#f87171,#ef4444);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">monitor_heart</span></div>
-          <span class="app-status">IN DEVELOPMENT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>YourBPM</h3>
-          <p>Workout playlists matched to your heart-rate zone — the music keeps pace with your body.</p>
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=YourBPM">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#a78bfa,#7c3aed);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">rocket_launch</span></div>
-          <span class="app-status">IN DEVELOPMENT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>Voyager: Cosmic Odometer</h3>
-          <p>A cosmic speedometer for your iPhone — see how fast you&rsquo;re really moving through the universe.</p>
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=Voyager">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#5eead4,#14b8a6);--status-color:#5eead4">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">grid_view</span></div>
-          <span class="app-status">COMING SOON</span>
-        </div>
-        <div class="app-card-body">
-          <h3>PaverLab</h3>
-          <p>Paver installation training — base to joint sand, spec checks, pattern sandbox. English and Spanish.</p>
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=PaverLab">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#818cf8,#4f46e5);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">architecture</span></div>
-          <span class="app-status">IN DEVELOPMENT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>BuildifyOS</h3>
-          <p>Photograph what you want built. Get a materials list and a plan you can hand a contractor.</p>
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=BuildifyOS">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-
-      <!-- TradeKit card: hidden until real copy exists.
-      <article class="app-card" style="--icon-bg:linear-gradient(135deg,#fb923c,#ea580c);--status-color:#fbbf24">
-        <div class="app-card-top">
-          <div class="app-icon"><span class="msr" aria-hidden="true">handyman</span></div>
-          <span class="app-status">IN DEVELOPMENT</span>
-        </div>
-        <div class="app-card-body">
-          <h3>TradeKit</h3>
-          TODO: TradeKit one-liner
-        </div>
-        <a class="app-link" href="mailto:hello@westmardev.com?subject=TradeKit">
-          <span>Get notified</span>
-          <span class="msr app-link-arrow" aria-hidden="true">arrow_forward</span>
-        </a>
-      </article>
-      -->
-
-    </div>
+  <section class="hero shell">
+    <h1 class="hero-title">Built one<br>at a time.<br>Finished<br>every time.</h1>
+    <p class="hero-lede">Westmar LLC is a Mello family company. The Mello brothers build the apps — design, engineering, and support, one problem at a time. No committee. No roadmap theater.</p>
   </section>
 
-  <!-- WHY WESTMAR -->
-  <section id="why" class="section">
-    <div class="rule">
-      <div class="eyebrow">WHY WESTMAR</div>
-      <h2 class="why-title">Most side projects die in the simulator. These didn&rsquo;t.</h2>
-      <p class="why-sub">Seven apps across unrelated domains — from construction sites, hardscape, and home building to the trades, fitness, service work, and outer space — each one native Swift, solving a problem the big players ignore, built to ship rather than to sit in a simulator.</p>
-      <div class="proof-grid">
+  <!-- LANES -->
+  <section class="lanes shell" aria-label="What Westmar makes">
+    <a class="lane lane-apps" href="#apps">
+      <div class="lane-head">
+        <span class="lane-title">Native apps</span>
+        <svg class="icon lane-arrow" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>
+      </div>
+      <div class="lane-foot">
+        <p>Each one native Swift, solving a problem the big players ignore.</p>
+        <span class="lane-cta">See the lineup</span>
+      </div>
+    </a>
+    <a class="lane lane-web" id="websites" href="websites.html">
+      <div class="lane-head">
+        <span class="lane-title">Websites for contractors</span>
+        <svg class="icon lane-arrow" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>
+      </div>
+      <div class="lane-foot">
+        <p>Flat prices, written down up front. Landing page $1,000, full site $3,000, custom from $5,000. Hosting and updates $99 a month.</p>
+        <span class="lane-cta">See pricing</span>
+      </div>
+    </a>
+  </section>
 
-        <div class="proof">
-          <span class="msr proof-icon" aria-hidden="true">speed</span>
-          <h3>Builds fast</h3>
-          <p>Three apps taken from idea to working software solo — design, Swift, backend, all of it.</p>
-        </div>
+  <!-- APPS -->
+  <section class="apps shell" id="apps">
+    <div class="section-head">
+      <h2 class="section-title">The apps</h2>
+      <p class="section-lede">SteerJobs and ShiftJar are in beta on TestFlight. Email to get notified when the rest land.</p>
+    </div>
+    <ul class="app-list">
 
-        <div class="proof">
-          <span class="msr proof-icon" aria-hidden="true">phone_iphone</span>
-          <h3>Native or nothing</h3>
-          <p>Every app is native iOS. No cross-platform shortcuts, no web views pretending to be apps.</p>
-        </div>
+      <li class="app-row">
+        <h3 class="app-name">SteerJobs</h3>
+        <p class="app-desc">Construction phases locked until the photo says approved. GPS check-in, hours, and a progress map for every job.</p>
+        <div class="app-status"><span class="pill pill-beta">Beta on TestFlight</span></div>
+        <div class="app-action"><a class="app-link" href="https://steerjobs.com">steerjobs.com</a></div>
+      </li>
 
-        <div class="proof">
-          <span class="msr proof-icon" aria-hidden="true">category</span>
-          <h3>Range on purpose</h3>
-          <p>Construction, space, fitness. Different domains, same discipline: one problem, solved well.</p>
-        </div>
+      <li class="app-row">
+        <h3 class="app-name">ShiftJar</h3>
+        <p class="app-desc">Tip tracker for servers and bartenders. Log a shift in seconds — tips, hours, tip-outs — and see your real take-home.</p>
+        <div class="app-status"><span class="pill pill-beta">Beta on TestFlight</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=ShiftJar">Get notified<span class="sr-only"> about ShiftJar</span></a></div>
+      </li>
 
+      <li class="app-row">
+        <h3 class="app-name">YourBPM</h3>
+        <p class="app-desc">Workout playlists matched to your heart-rate zone — the music keeps pace with your body.</p>
+        <div class="app-status"><span class="pill pill-dev">In development</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=YourBPM">Get notified<span class="sr-only"> about YourBPM</span></a></div>
+      </li>
+
+      <li class="app-row">
+        <h3 class="app-name">Voyager: Cosmic Odometer</h3>
+        <p class="app-desc">A cosmic speedometer for your iPhone — see how fast you’re really moving through the universe.</p>
+        <div class="app-status"><span class="pill pill-dev">In development</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=Voyager">Get notified<span class="sr-only"> about Voyager</span></a></div>
+      </li>
+
+      <li class="app-row">
+        <h3 class="app-name">PaverLab</h3>
+        <p class="app-desc">Paver installation training — base to joint sand, spec checks, pattern sandbox. English and Spanish.</p>
+        <div class="app-status"><span class="pill pill-soon">Coming soon</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=PaverLab">Get notified<span class="sr-only"> about PaverLab</span></a></div>
+      </li>
+
+      <li class="app-row">
+        <h3 class="app-name">BuildifyOS</h3>
+        <p class="app-desc">Photograph what you want built. Get a materials list and a plan you can hand a contractor.</p>
+        <div class="app-status"><span class="pill pill-dev">In development</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=BuildifyOS">Get notified<span class="sr-only"> about BuildifyOS</span></a></div>
+      </li>
+
+      <!-- TradeKit row: hidden until real copy exists.
+      <li class="app-row">
+        <h3 class="app-name">TradeKit</h3>
+        <p class="app-desc">TODO: TradeKit one-liner</p>
+        <div class="app-status"><span class="pill pill-dev">In development</span></div>
+        <div class="app-action"><a class="app-link" href="mailto:hello@westmardev.com?subject=TradeKit">Get notified<span class="sr-only"> about TradeKit</span></a></div>
+      </li>
+      -->
+
+    </ul>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof shell" id="why">
+    <h2 class="proof-title">Most side projects die in the simulator. These didn’t.</h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <h3>Builds fast</h3>
+        <p>Three apps taken from idea to working software solo — design, Swift, backend, all of it.</p>
+      </div>
+      <div class="proof-item">
+        <h3>Native or nothing</h3>
+        <p>Every app is native iOS. No cross-platform shortcuts, no web views pretending to be apps.</p>
+      </div>
+      <div class="proof-item">
+        <h3>Range on purpose</h3>
+        <p>Construction, space, fitness. Different domains, same discipline: one problem, solved well.</p>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="rule faq-rule">
-      <div class="eyebrow">FAQ</div>
-      <h2>Questions.</h2>
-      <div class="faq-list">
+  <section class="faq shell" id="faq">
+    <h2 class="section-title">Questions.</h2>
+    <div class="faq-list">
 
-        <div class="faq-item is-open">
-          <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a-0" id="faq-q-0">
-            <span>Who is behind WestMar?</span>
-            <span class="msr faq-chevron" aria-hidden="true">expand_more</span>
-          </button>
-          <p class="faq-a" id="faq-a-0" role="region" aria-labelledby="faq-q-0">WestMar is a family company. The Mello brothers handle design, engineering, and support across every app — no outside teams, no contractors.</p>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
-            <span>What happens to my data?</span>
-            <span class="msr faq-chevron" aria-hidden="true">expand_more</span>
-          </button>
-          <p class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>Each app keeps its data isolated and minimal. No analytics SDKs, no ad networks, no tracking. Nothing is sold, nothing is shared with advertisers — across every WestMar app, no exceptions.</p>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
-            <span>Do you build websites too?</span>
-            <span class="msr faq-chevron" aria-hidden="true">expand_more</span>
-          </button>
-          <p class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>Yes — flat-price websites for contractors and trade businesses, with hosting and updates handled monthly. See the <a href="websites.html">websites page</a> for pricing.</p>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
-            <span>How do I report a bug or get support?</span>
-            <span class="msr faq-chevron" aria-hidden="true">expand_more</span>
-          </button>
-          <p class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>Email hello@westmardev.com with the app name in the subject. Reports go straight to the person who wrote the code, so fixes are fast.</p>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
-            <span>Are the apps on the App Store?</span>
-            <span class="msr faq-chevron" aria-hidden="true">expand_more</span>
-          </button>
-          <p class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>Not yet. SteerJobs is in beta on TestFlight, Voyager is built and heading for review, and YourBPM is in active development. Email to get notified when they land.</p>
-        </div>
-
+      <div class="faq-item is-open">
+        <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a-0" id="faq-q-0">
+          <span>Who is behind Westmar?</span>
+          <svg class="icon faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <p class="faq-a" id="faq-a-0" role="region" aria-labelledby="faq-q-0">Westmar is a family company. The Mello brothers handle design, engineering, and support across every app — no outside teams, no contractors.</p>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+          <span>What happens to my data?</span>
+          <svg class="icon faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <p class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>Each app keeps its data isolated and minimal. No analytics SDKs, no ad networks, no tracking. Nothing is sold, nothing is shared with advertisers — across every Westmar app, no exceptions.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          <span>Do you build websites too?</span>
+          <svg class="icon faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <p class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>Yes — flat-price websites for contractors and trade businesses, with hosting and updates handled monthly. See the <a href="websites.html">websites page</a> for pricing.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          <span>How do I report a bug or get support?</span>
+          <svg class="icon faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <p class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>Email hello@westmardev.com with the app name in the subject. Reports go straight to the person who wrote the code, so fixes are fast.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          <span>Are the apps on the App Store?</span>
+          <svg class="icon faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <p class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>Not yet. SteerJobs is in beta on TestFlight, Voyager is built and heading for review, and YourBPM is in active development. Email to get notified when they land.</p>
+      </div>
+
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section">
-    <div class="cta">
-      <h2>Something broken? Something next?</h2>
-      <p>Bug reports, feedback, and hellos all land in the same inbox.</p>
-      <a class="btn btn-primary" href="mailto:hello@westmardev.com">hello@westmardev.com</a>
+  <section class="cta-band shell" id="contact">
+    <h2 class="cta-title">Something broken?<br>Something next?</h2>
+    <p>Bug reports, feedback, and hellos all land in the same inbox.</p>
+    <div class="cta-actions">
+      <a class="btn btn-red btn-lg" href="mailto:hello@westmardev.com">hello@westmardev.com</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-brand">
-      <span class="brand-mark brand-mark-sm" aria-hidden="true">W</span>
-      © 2026 WestMar LLC
-    </div>
-    <div class="footer-links">
-      <a href="websites.html">Websites</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
-      <a href="mailto:hello@westmardev.com">Contact</a>
-    </div>
-  </footer>
+</main>
 
-</div>
+<!-- FOOTER -->
+<footer class="site-footer shell">
+  <div class="footer-brand">
+    <span class="wordmark" aria-hidden="true"><span class="wordmark-name">Westmar</span> <span class="wordmark-llc">LLC</span></span>
+    <span class="footer-copy">© 2026 Westmar LLC</span>
+  </div>
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="websites.html">Websites</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+    <a href="mailto:hello@westmardev.com">Contact</a>
+  </nav>
+</footer>
 
 <script src="app.js" defer></script>
 </body>
