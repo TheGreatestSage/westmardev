@@ -7,33 +7,36 @@
 <meta name="description" content="Flat-price websites for contractors. $1,000 landing page, $3,000 full site, custom builds. Hosting and updates $99/month.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125..150,800..900&family=Archivo:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HEADER -->
-<header class="site-header shell">
-  <a class="wordmark" href="index.html" aria-label="Westmar LLC home">
-    <span class="wordmark-name">Westmar</span>
-    <span class="wordmark-llc">LLC</span>
-  </a>
-  <nav class="site-nav" aria-label="Main">
-    <a class="nav-link" href="index.html#apps">Apps</a>
-    <a class="nav-link" href="websites.html" aria-current="page">Websites</a>
-    <a class="nav-link" href="index.html#faq">FAQ</a>
-    <a class="nav-link" href="support.html">Support</a>
-    <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Dark mode">
-        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </button>
-      <a class="btn btn-inverse" href="mailto:hello@westmardev.com">Contact</a>
+<!-- HEADER (SiteNav) -->
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="index.html" aria-label="Westmar LLC home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="7.06 17.25 367.69 22.19" aria-hidden="true" focusable="false"><path fill="#C72020" fill-rule="evenodd" d="M7.06 18.31 7.06 18.75 7.25 19.31 7.81 20.12 8.25 21.19 9.81 23.94 10.31 25.12 10.75 25.75 12.38 29.06 12.81 29.69 13.31 30.88 14.94 33.75 16.56 37.06 17.44 38.50 17.75 38.75 18.44 39.00 24.75 39.00 25.38 38.81 25.81 38.50 26.38 37.62 26.88 36.12 27.44 35.06 27.81 33.88 28.50 32.50 28.81 31.44 29.44 30.25 29.88 28.88 30.94 26.50 31.31 26.19 31.56 26.19 32.06 26.56 32.62 27.56 33.00 28.88 33.69 30.19 34.06 31.44 34.69 32.56 35.06 33.88 35.75 35.19 36.06 36.31 36.69 37.44 37.06 38.44 37.38 38.81 37.81 39.00 44.50 39.00 45.12 38.75 45.75 38.12 47.38 34.81 47.75 34.31 48.25 33.12 48.69 32.50 49.25 31.19 50.88 28.31 55.81 18.75 55.75 18.06 55.25 17.69 47.56 17.69 46.56 18.06 46.19 18.56 45.94 19.38 45.25 20.62 44.88 21.88 44.19 23.12 43.88 24.19 43.25 25.31 42.81 26.69 42.19 27.81 41.81 29.06 41.50 29.62 41.00 30.12 40.50 30.25 40.12 29.94 39.69 28.69 39.00 27.50 38.81 26.81 38.00 25.31 37.75 24.50 36.94 23.00 36.69 22.19 36.00 21.00 35.69 20.00 34.56 18.06 34.19 17.81 33.69 17.69 29.69 17.62 28.94 17.81 28.50 18.06 28.00 18.62 23.62 28.00 23.06 29.44 22.56 30.00 21.94 30.12 21.69 30.00 21.31 29.50 21.00 28.50 20.50 27.56 19.94 26.00 19.50 25.25 18.94 23.69 18.38 22.69 16.94 19.06 16.19 18.06 15.25 17.62 7.62 17.69 7.19 18.00ZM59.50 18.19 59.25 18.88 59.25 37.94 59.69 38.75 60.69 39.06 85.94 39.06 86.38 39.00 86.81 38.69 87.06 38.06 87.06 34.75 86.81 34.06 86.31 33.69 69.88 33.69 69.44 33.50 69.12 33.19 68.88 32.50 68.88 31.50 69.00 31.06 69.50 30.44 69.88 30.31 82.38 30.31 82.94 29.88 83.12 29.44 83.12 27.44 82.94 26.75 82.38 26.25 69.88 26.25 69.44 26.06 69.00 25.50 68.88 25.06 68.88 24.00 69.19 23.31 69.88 22.94 85.06 22.88 85.62 22.50 85.88 21.88 85.88 18.88 85.50 18.00 84.88 17.69 84.31 17.62 60.50 17.62 59.81 17.88ZM91.38 21.38 90.31 23.06 89.81 24.88 89.81 25.62 90.06 26.62 90.50 27.50 91.12 28.19 92.00 28.88 93.81 29.69 95.56 30.19 101.88 30.94 106.06 31.19 106.81 31.44 107.12 31.81 107.12 32.31 106.62 33.00 105.44 33.50 104.50 33.69 103.19 33.69 101.81 33.38 101.12 33.06 100.38 32.50 99.44 32.19 91.12 32.19 90.56 32.38 90.25 32.81 90.25 33.44 90.62 34.25 91.50 35.50 92.69 36.69 94.12 37.62 97.44 38.88 100.94 39.31 105.94 39.38 109.06 39.06 110.88 38.69 113.31 37.75 115.00 36.62 115.81 35.81 116.75 34.56 117.75 32.31 117.88 31.56 117.81 30.69 117.56 29.94 116.94 28.94 116.31 28.25 115.56 27.69 113.44 26.75 109.12 25.88 101.62 25.38 101.00 25.06 100.69 24.56 100.75 24.12 101.19 23.56 101.88 23.19 103.00 22.94 105.25 23.06 107.50 24.12 108.62 24.38 116.06 24.50 117.00 24.25 117.25 23.88 117.25 23.19 116.75 22.06 115.38 20.38 113.50 19.06 111.69 18.25 108.94 17.56 107.69 17.38 105.94 17.25 101.62 17.25 99.94 17.38 98.12 17.69 95.44 18.44 93.19 19.62ZM120.44 17.88 120.19 18.25 120.06 18.75 120.00 21.00 120.06 22.06 120.44 22.75 120.88 22.94 128.19 22.94 128.62 23.12 129.12 23.75 129.12 37.75 129.38 38.50 129.69 38.81 130.19 39.00 137.81 39.00 138.50 38.69 138.88 37.88 138.81 24.12 139.00 23.50 139.38 23.12 139.81 22.94 147.19 22.94 147.62 22.69 147.94 21.94 147.88 18.50 147.69 18.06 147.38 17.75 147.00 17.62 121.25 17.62ZM151.62 18.44 151.50 18.88 151.50 38.00 151.75 38.56 152.31 38.94 160.19 39.06 160.88 38.69 161.12 38.00 161.06 27.44 161.25 26.81 161.56 26.56 161.81 26.62 162.81 27.75 164.31 30.31 169.38 38.12 169.75 38.56 170.38 38.94 176.31 39.00 177.31 38.62 179.69 35.12 184.19 27.88 185.31 26.44 185.56 26.44 185.75 26.62 185.94 27.12 185.94 38.12 186.12 38.62 186.44 38.94 186.94 39.06 194.06 39.06 194.88 38.88 195.44 38.25 195.56 37.50 195.50 18.81 195.25 18.19 194.75 17.75 194.31 17.62 184.75 17.62 184.19 17.88 183.19 18.88 174.50 31.62 173.75 32.19 173.19 32.12 172.62 31.62 163.94 19.00 162.75 17.81 162.25 17.62 152.94 17.62 152.06 17.88ZM199.19 38.00 199.25 38.62 199.94 39.00 207.62 39.00 208.44 38.62 208.94 38.06 210.00 36.38 210.56 35.81 211.38 35.44 224.38 35.44 225.44 36.00 227.06 38.44 227.44 38.81 227.94 39.00 235.31 39.06 236.25 38.81 236.50 38.38 236.44 37.94 235.94 37.06 234.38 35.06 223.75 19.62 222.38 17.94 221.50 17.69 214.19 17.69 213.31 18.00 212.12 19.44 201.00 35.44 199.50 37.38ZM214.50 29.19 214.94 28.31 215.69 27.31 217.06 25.00 217.50 24.56 218.00 24.44 218.38 24.56 218.81 25.06 220.12 27.38 220.94 28.50 221.31 29.56 221.06 30.00 220.31 30.25 215.31 30.25 214.62 29.88ZM240.12 18.31 239.94 18.75 239.88 19.38 239.88 37.81 240.06 38.38 240.50 38.81 241.12 39.00 248.69 39.00 249.25 38.81 249.50 38.56 249.75 37.81 249.75 33.69 250.06 33.06 250.56 32.75 256.38 32.81 258.19 33.06 259.19 33.44 260.75 34.94 262.12 38.44 262.62 38.88 264.38 39.00 271.25 39.06 271.75 38.88 272.12 38.38 272.12 37.44 271.06 33.94 270.44 33.00 269.06 31.81 268.94 31.31 269.06 31.00 269.50 30.56 270.25 30.12 271.00 29.44 271.75 28.44 272.06 27.81 272.44 25.81 272.38 24.25 272.06 22.75 271.81 22.19 270.94 21.00 269.56 19.88 268.44 19.25 265.62 18.38 264.00 18.12 261.88 18.06 258.94 17.75 241.44 17.62 240.44 17.94ZM249.69 24.19 249.88 23.44 250.19 23.06 250.56 22.88 258.25 23.00 259.94 23.31 261.12 23.94 261.69 24.56 261.81 25.50 261.62 26.00 261.06 26.56 260.31 27.00 259.19 27.31 257.44 27.50 250.50 27.56 250.00 27.19 249.69 26.44Z"/><path fill="currentColor" fill-rule="evenodd" d="M284.94 18.12 284.69 19.00 284.69 37.75 284.81 38.38 285.19 38.88 285.75 39.06 310.56 39.00 310.94 38.88 311.38 38.50 311.62 37.81 311.62 35.12 311.31 34.19 310.69 33.75 295.50 33.75 294.88 33.50 294.44 33.00 294.25 32.19 294.31 18.88 294.12 18.31 293.69 17.88 293.12 17.69 285.75 17.62 285.31 17.75ZM315.19 18.31 315.00 18.81 314.94 19.69 314.94 37.62 315.06 38.19 315.50 38.75 316.19 39.00 341.06 39.00 341.44 38.88 341.81 38.50 342.00 37.81 342.00 35.12 341.75 34.19 341.19 33.75 325.69 33.81 325.25 33.62 324.88 33.12 324.69 32.19 324.75 18.88 324.56 18.25 324.31 17.94 323.62 17.69 316.25 17.69 315.56 17.94ZM343.44 24.94 343.19 25.81 343.00 27.94 343.12 30.44 343.44 31.75 344.38 33.69 345.50 35.12 347.38 36.75 349.62 37.94 352.44 38.81 356.44 39.31 360.69 39.38 364.88 39.00 366.19 38.75 369.19 37.75 370.81 36.88 372.56 35.50 373.62 34.25 374.69 32.25 374.56 31.56 374.12 31.25 365.81 31.19 364.75 31.56 363.31 32.75 362.50 33.19 360.75 33.62 358.56 33.75 356.75 33.44 355.50 33.00 354.25 32.06 353.25 30.75 352.75 29.50 352.62 28.81 352.75 27.19 353.19 26.06 353.81 25.06 354.62 24.25 355.88 23.50 356.94 23.12 358.12 22.94 360.12 22.94 361.44 23.12 363.25 23.88 364.75 25.06 365.75 25.44 374.06 25.38 374.56 25.00 374.62 24.25 374.00 23.00 373.06 21.75 372.00 20.69 370.06 19.38 367.31 18.25 364.12 17.56 362.69 17.38 357.69 17.25 354.69 17.50 350.88 18.31 348.19 19.44 346.25 20.81 344.62 22.62Z"/></svg></a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html#apps">Apps</a>
+      <a class="nav-link" href="websites.html">Websites</a>
+      <a class="nav-link" href="support.html">Support</a>
+      <a class="nav-link" href="index.html#faq">FAQ</a>
+      <a class="nav-contact" href="mailto:hello@westmardev.com">Contact</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-panel">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
+    <div class="nav-panel" id="nav-panel" hidden>
+      <a class="nav-panel-link" href="index.html#apps">Apps</a>
+      <a class="nav-panel-link" href="websites.html">Websites</a>
+      <a class="nav-panel-link" href="support.html">Support</a>
+      <a class="nav-panel-link" href="index.html#faq">FAQ</a>
+      <a class="nav-panel-contact" href="mailto:hello@westmardev.com">Contact</a>
     </div>
   </nav>
 </header>
@@ -41,122 +44,145 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="page-hero shell">
-    <h1 class="page-title">Websites for contractors who’d rather be on the job.</h1>
-    <p class="page-lede">Built for trades. <b>You send photos and a few sentences. We handle the rest.</b></p>
-    <a class="btn btn-red btn-lg" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
-  </section>
+  <div class="hero">
+    <h1 class="hero-title">Websites for contractors who’d rather be on the job.</h1>
+    <p class="hero-lede">You send photos and a few sentences. We handle the rest, at a flat price written down up front.</p>
+    <div class="hero-actions">
+      <a class="btn" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
+      <a class="more" href="#pricing">See pricing ›</a>
+    </div>
+  </div>
 
   <!-- PRICING -->
-  <section class="web-section shell" id="pricing">
-    <div class="section-head">
+  <section class="wrap-wide web-section" id="pricing">
+    <div class="section-intro pricing-intro">
       <h2 class="section-title">The estimate.</h2>
       <p class="section-lede">Flat prices, written down up front. Same way you’d want it from a sub.</p>
     </div>
 
-    <div class="estimate-wrap">
-      <div class="estimate">
-        <div class="estimate-head"><span>Website build</span><span>One-time</span></div>
-
-        <div class="tiers">
-          <div class="tier">
-            <h3 class="tier-name">Landing page</h3>
-            <p class="tier-price">$1,000</p>
-            <p class="tier-sub">One page. Get found, get called.</p>
-            <ul class="tier-list"><li>Click-to-call</li><li>Contact form</li><li>Google Business link</li><li>Live in 3 weeks</li></ul>
-          </div>
-
-          <div class="tier tier-pick">
-            <p class="pill pill-red">Most contractors land here</p>
-            <h3 class="tier-name">Full site</h3>
-            <p class="tier-price">$3,000</p>
-            <p class="tier-sub">Up to five pages. Show the work, post it yourself.</p>
-            <ul class="tier-list"><li>Service and area pages</li><li>Filterable project gallery</li><li>Individual project pages</li><li>Quote request with photo upload</li><li>Admin panel</li></ul>
-          </div>
-
-          <div class="tier">
-            <h3 class="tier-name">Custom</h3>
-            <p class="tier-price">$5,000+</p>
-            <p class="tier-sub">Booking, customer portals, integrations. Whatever the job needs.</p>
-          </div>
-        </div>
-
-        <div class="estimate-foot">
-          <p class="estimate-foot-title">Hosting and updates: <em>$99 / month</em></p>
-          <p>Two hours of changes each month, security patches, backups, uptime monitoring. Plus two months of SteerJobs free once your site launches.</p>
-        </div>
+    <div class="tiers">
+      <div class="tier">
+        <span class="tier-tag-space"></span>
+        <h3 class="tier-name">Landing page</h3>
+        <span class="tier-price">$1,000</span>
+        <p class="tier-sub">One page. Get found, get called.</p>
+        <ul class="checklist"><li>Click-to-call</li><li>Contact form</li><li>Google Business link</li><li>Live in 3 weeks</li></ul>
+        <a class="more" href="mailto:hello@westmardev.com?subject=Landing%20page">Get a quote ›</a>
       </div>
-      <p class="note">Custom builds are quoted $199–$299/month at signing. Site care runs on a 24-month term. Extra work is $100/hour.</p>
+      <div class="tier tier-dark on-dark">
+        <span class="badge badge-red">Most contractors land here</span>
+        <h3 class="tier-name">Full site</h3>
+        <span class="tier-price">$3,000</span>
+        <p class="tier-sub">Up to five pages. Show the work, post it yourself.</p>
+        <ul class="checklist"><li>Service and area pages</li><li>Filterable project gallery</li><li>Individual project pages</li><li>Quote requests with photo upload</li><li>Admin panel</li></ul>
+        <a class="more" href="mailto:hello@westmardev.com?subject=Full%20site">Get a quote ›</a>
+      </div>
+      <div class="tier">
+        <span class="tier-tag-space"></span>
+        <h3 class="tier-name">Custom</h3>
+        <span class="tier-price">$5,000+</span>
+        <p class="tier-sub">Booking, customer portals, integrations. Whatever the job needs.</p>
+        <a class="more" href="mailto:hello@westmardev.com?subject=Custom%20build">Tell us about the job ›</a>
+      </div>
     </div>
+
+    <div class="hosting">
+      <div class="hosting-price"><h3 class="tier-name">Hosting and updates</h3><span class="hosting-amount">$99<span> / month</span></span></div>
+      <div class="hosting-copy">
+        <p>Two hours of changes each month, security patches, backups and uptime monitoring. <b>Plus two months of SteerJobs free once your site launches.</b></p>
+        <a class="more" href="#care">What $99 covers ›</a>
+      </div>
+    </div>
+    <p class="fine-print">Custom builds are quoted at $199–$299 a month at signing. Site care runs on a 24-month term. Extra work is $100 an hour.</p>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="web-section shell" id="work">
-    <div class="section-head">
+  <!-- RECENT WORK -->
+  <section class="wrap-wide web-section web-section-gap" id="work">
+    <div class="section-intro work-intro">
       <h2 class="section-title">Recent work.</h2>
-      <p class="section-lede">Real sites, real jobs. Tap one and use it like a customer would.</p>
+      <p class="section-lede">Real sites for real jobs. Open one and use it like a customer would.</p>
     </div>
-    <div class="work">
-      <a class="job" href="https://wildremodeling.com">
-        <span class="job-top">
-          <span class="job-url">wildremodeling.com</span>
-          <svg class="icon job-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>
-        </span>
-        <h3 class="job-name">Wild Remodeling</h3>
-        <p class="job-desc">Kitchen, bath, and whole-home remodeler. Filterable gallery, project pages, quote requests with photo upload.</p>
-        <p class="job-level">Full site build</p>
+    <div class="work-grid">
+      <a class="work-card" href="https://wildremodeling.com" target="_blank" rel="noopener">
+        <span class="work-url"><span class="work-dot"></span>wildremodeling.com<span class="work-arrow" aria-hidden="true">↗</span></span>
+        <span class="work-spacer"></span>
+        <h3 class="work-name">Wild Remodeling</h3>
+        <p class="work-desc">Kitchen, bath and whole-home remodeler. Filterable gallery, project pages, and quote requests with photo upload.</p>
+        <span class="badge badge-outline">Full site build</span>
       </a>
-      <a class="job" href="https://steerjobs.com">
-        <span class="job-top">
-          <span class="job-url">steerjobs.com</span>
-          <svg class="icon job-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>
-        </span>
-        <h3 class="job-name">SteerJobs</h3>
-        <p class="job-desc">Job-phase tracking software for construction crews. Photo-verified phases, GPS check-in, customer progress page.</p>
-        <p class="job-level">Custom build — we build software too</p>
+      <a class="work-card" href="https://steerjobs.com" target="_blank" rel="noopener">
+        <span class="work-url"><span class="work-dot"></span>steerjobs.com<span class="work-arrow" aria-hidden="true">↗</span></span>
+        <span class="work-spacer"></span>
+        <h3 class="work-name">SteerJobs</h3>
+        <p class="work-desc">Job-phase tracking for construction crews. Photo-verified phases, GPS check-in, and a progress page for customers.</p>
+        <span class="badge badge-outline">Custom build · we build software too</span>
       </a>
     </div>
   </section>
 
   <!-- SITE CARE -->
-  <section class="web-section care-band shell" id="care">
-    <h2 class="section-title">What $99 covers.</h2>
-    <ul class="care-grid">
-      <li><strong>Hosting and SSL</strong><span>Fast, secure, always on.</span></li>
-      <li><strong>Two hours of edits monthly</strong><span>New photos, price changes, a fresh review. Text it over.</span></li>
-      <li><strong>Backups and patches</strong><span>Daily backups. Security updates handled.</span></li>
-      <li><strong>Uptime monitoring</strong><span>If it goes down, we know before you do.</span></li>
-      <li><strong>Domain renewal</strong><span>Handled and billed at cost.</span></li>
-      <li><strong>Email support</strong><span>Reply within two business days.</span></li>
-    </ul>
-    <p class="note">Not included: new pages, redesigns, logos, ads, SEO campaigns. Those are quoted separately.</p>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-band shell">
-    <h2 class="cta-title">Not sure you need a site?</h2>
-    <p>Send a note. We’ll tell you straight whether you need a website or just a better Google listing.</p>
-    <div class="cta-actions">
-      <a class="btn btn-red btn-lg" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
-      <a class="btn btn-outline btn-lg" href="mailto:hello@westmardev.com">Email</a>
+  <section class="wrap-wide web-section web-section-gap" id="care">
+    <div class="care-tile">
+      <h2 class="section-title">What $99 covers.</h2>
+      <div class="care-grid">
+        <div class="care-item"><h3>Hosting and SSL</h3><p>Fast, secure, always on.</p></div>
+        <div class="care-item"><h3>Two hours of edits monthly</h3><p>New photos, price changes, a fresh review. Text it over.</p></div>
+        <div class="care-item"><h3>Backups and patches</h3><p>Daily backups. Security updates handled.</p></div>
+        <div class="care-item"><h3>Uptime monitoring</h3><p>If it goes down, we know before you do.</p></div>
+        <div class="care-item"><h3>Domain renewal</h3><p>Handled and billed at cost.</p></div>
+        <div class="care-item"><h3>Email support</h3><p>Replies within two business days.</p></div>
+      </div>
+      <p class="fine-print">Not included: new pages, redesigns, logos, ads and SEO campaigns. Those are quoted separately.</p>
     </div>
   </section>
 
+  <!-- CTA -->
+  <div class="cta cta-plain">
+    <h2 class="cta-title">Not sure you need a site?</h2>
+    <p class="cta-lede">Send a note. We’ll tell you straight whether you need a website or just a better Google listing.</p>
+    <div class="cta-actions">
+      <a class="btn" href="mailto:hello@westmardev.com?subject=Website">Get a quote</a>
+      <a class="more" href="mailto:hello@westmardev.com">Email us ›</a>
+    </div>
+  </div>
+
 </main>
 
-<!-- FOOTER -->
-<footer class="site-footer shell">
-  <div class="footer-brand">
-    <span class="wordmark" aria-hidden="true"><span class="wordmark-name">Westmar</span> <span class="wordmark-llc">LLC</span></span>
-    <span class="footer-copy">© 2026 Westmar LLC</span>
+<!-- FOOTER (SiteFooter) -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="7.06 17.25 367.69 22.19" aria-hidden="true" focusable="false"><path fill="#C72020" fill-rule="evenodd" d="M7.06 18.31 7.06 18.75 7.25 19.31 7.81 20.12 8.25 21.19 9.81 23.94 10.31 25.12 10.75 25.75 12.38 29.06 12.81 29.69 13.31 30.88 14.94 33.75 16.56 37.06 17.44 38.50 17.75 38.75 18.44 39.00 24.75 39.00 25.38 38.81 25.81 38.50 26.38 37.62 26.88 36.12 27.44 35.06 27.81 33.88 28.50 32.50 28.81 31.44 29.44 30.25 29.88 28.88 30.94 26.50 31.31 26.19 31.56 26.19 32.06 26.56 32.62 27.56 33.00 28.88 33.69 30.19 34.06 31.44 34.69 32.56 35.06 33.88 35.75 35.19 36.06 36.31 36.69 37.44 37.06 38.44 37.38 38.81 37.81 39.00 44.50 39.00 45.12 38.75 45.75 38.12 47.38 34.81 47.75 34.31 48.25 33.12 48.69 32.50 49.25 31.19 50.88 28.31 55.81 18.75 55.75 18.06 55.25 17.69 47.56 17.69 46.56 18.06 46.19 18.56 45.94 19.38 45.25 20.62 44.88 21.88 44.19 23.12 43.88 24.19 43.25 25.31 42.81 26.69 42.19 27.81 41.81 29.06 41.50 29.62 41.00 30.12 40.50 30.25 40.12 29.94 39.69 28.69 39.00 27.50 38.81 26.81 38.00 25.31 37.75 24.50 36.94 23.00 36.69 22.19 36.00 21.00 35.69 20.00 34.56 18.06 34.19 17.81 33.69 17.69 29.69 17.62 28.94 17.81 28.50 18.06 28.00 18.62 23.62 28.00 23.06 29.44 22.56 30.00 21.94 30.12 21.69 30.00 21.31 29.50 21.00 28.50 20.50 27.56 19.94 26.00 19.50 25.25 18.94 23.69 18.38 22.69 16.94 19.06 16.19 18.06 15.25 17.62 7.62 17.69 7.19 18.00ZM59.50 18.19 59.25 18.88 59.25 37.94 59.69 38.75 60.69 39.06 85.94 39.06 86.38 39.00 86.81 38.69 87.06 38.06 87.06 34.75 86.81 34.06 86.31 33.69 69.88 33.69 69.44 33.50 69.12 33.19 68.88 32.50 68.88 31.50 69.00 31.06 69.50 30.44 69.88 30.31 82.38 30.31 82.94 29.88 83.12 29.44 83.12 27.44 82.94 26.75 82.38 26.25 69.88 26.25 69.44 26.06 69.00 25.50 68.88 25.06 68.88 24.00 69.19 23.31 69.88 22.94 85.06 22.88 85.62 22.50 85.88 21.88 85.88 18.88 85.50 18.00 84.88 17.69 84.31 17.62 60.50 17.62 59.81 17.88ZM91.38 21.38 90.31 23.06 89.81 24.88 89.81 25.62 90.06 26.62 90.50 27.50 91.12 28.19 92.00 28.88 93.81 29.69 95.56 30.19 101.88 30.94 106.06 31.19 106.81 31.44 107.12 31.81 107.12 32.31 106.62 33.00 105.44 33.50 104.50 33.69 103.19 33.69 101.81 33.38 101.12 33.06 100.38 32.50 99.44 32.19 91.12 32.19 90.56 32.38 90.25 32.81 90.25 33.44 90.62 34.25 91.50 35.50 92.69 36.69 94.12 37.62 97.44 38.88 100.94 39.31 105.94 39.38 109.06 39.06 110.88 38.69 113.31 37.75 115.00 36.62 115.81 35.81 116.75 34.56 117.75 32.31 117.88 31.56 117.81 30.69 117.56 29.94 116.94 28.94 116.31 28.25 115.56 27.69 113.44 26.75 109.12 25.88 101.62 25.38 101.00 25.06 100.69 24.56 100.75 24.12 101.19 23.56 101.88 23.19 103.00 22.94 105.25 23.06 107.50 24.12 108.62 24.38 116.06 24.50 117.00 24.25 117.25 23.88 117.25 23.19 116.75 22.06 115.38 20.38 113.50 19.06 111.69 18.25 108.94 17.56 107.69 17.38 105.94 17.25 101.62 17.25 99.94 17.38 98.12 17.69 95.44 18.44 93.19 19.62ZM120.44 17.88 120.19 18.25 120.06 18.75 120.00 21.00 120.06 22.06 120.44 22.75 120.88 22.94 128.19 22.94 128.62 23.12 129.12 23.75 129.12 37.75 129.38 38.50 129.69 38.81 130.19 39.00 137.81 39.00 138.50 38.69 138.88 37.88 138.81 24.12 139.00 23.50 139.38 23.12 139.81 22.94 147.19 22.94 147.62 22.69 147.94 21.94 147.88 18.50 147.69 18.06 147.38 17.75 147.00 17.62 121.25 17.62ZM151.62 18.44 151.50 18.88 151.50 38.00 151.75 38.56 152.31 38.94 160.19 39.06 160.88 38.69 161.12 38.00 161.06 27.44 161.25 26.81 161.56 26.56 161.81 26.62 162.81 27.75 164.31 30.31 169.38 38.12 169.75 38.56 170.38 38.94 176.31 39.00 177.31 38.62 179.69 35.12 184.19 27.88 185.31 26.44 185.56 26.44 185.75 26.62 185.94 27.12 185.94 38.12 186.12 38.62 186.44 38.94 186.94 39.06 194.06 39.06 194.88 38.88 195.44 38.25 195.56 37.50 195.50 18.81 195.25 18.19 194.75 17.75 194.31 17.62 184.75 17.62 184.19 17.88 183.19 18.88 174.50 31.62 173.75 32.19 173.19 32.12 172.62 31.62 163.94 19.00 162.75 17.81 162.25 17.62 152.94 17.62 152.06 17.88ZM199.19 38.00 199.25 38.62 199.94 39.00 207.62 39.00 208.44 38.62 208.94 38.06 210.00 36.38 210.56 35.81 211.38 35.44 224.38 35.44 225.44 36.00 227.06 38.44 227.44 38.81 227.94 39.00 235.31 39.06 236.25 38.81 236.50 38.38 236.44 37.94 235.94 37.06 234.38 35.06 223.75 19.62 222.38 17.94 221.50 17.69 214.19 17.69 213.31 18.00 212.12 19.44 201.00 35.44 199.50 37.38ZM214.50 29.19 214.94 28.31 215.69 27.31 217.06 25.00 217.50 24.56 218.00 24.44 218.38 24.56 218.81 25.06 220.12 27.38 220.94 28.50 221.31 29.56 221.06 30.00 220.31 30.25 215.31 30.25 214.62 29.88ZM240.12 18.31 239.94 18.75 239.88 19.38 239.88 37.81 240.06 38.38 240.50 38.81 241.12 39.00 248.69 39.00 249.25 38.81 249.50 38.56 249.75 37.81 249.75 33.69 250.06 33.06 250.56 32.75 256.38 32.81 258.19 33.06 259.19 33.44 260.75 34.94 262.12 38.44 262.62 38.88 264.38 39.00 271.25 39.06 271.75 38.88 272.12 38.38 272.12 37.44 271.06 33.94 270.44 33.00 269.06 31.81 268.94 31.31 269.06 31.00 269.50 30.56 270.25 30.12 271.00 29.44 271.75 28.44 272.06 27.81 272.44 25.81 272.38 24.25 272.06 22.75 271.81 22.19 270.94 21.00 269.56 19.88 268.44 19.25 265.62 18.38 264.00 18.12 261.88 18.06 258.94 17.75 241.44 17.62 240.44 17.94ZM249.69 24.19 249.88 23.44 250.19 23.06 250.56 22.88 258.25 23.00 259.94 23.31 261.12 23.94 261.69 24.56 261.81 25.50 261.62 26.00 261.06 26.56 260.31 27.00 259.19 27.31 257.44 27.50 250.50 27.56 250.00 27.19 249.69 26.44Z"/><path fill="currentColor" fill-rule="evenodd" d="M284.94 18.12 284.69 19.00 284.69 37.75 284.81 38.38 285.19 38.88 285.75 39.06 310.56 39.00 310.94 38.88 311.38 38.50 311.62 37.81 311.62 35.12 311.31 34.19 310.69 33.75 295.50 33.75 294.88 33.50 294.44 33.00 294.25 32.19 294.31 18.88 294.12 18.31 293.69 17.88 293.12 17.69 285.75 17.62 285.31 17.75ZM315.19 18.31 315.00 18.81 314.94 19.69 314.94 37.62 315.06 38.19 315.50 38.75 316.19 39.00 341.06 39.00 341.44 38.88 341.81 38.50 342.00 37.81 342.00 35.12 341.75 34.19 341.19 33.75 325.69 33.81 325.25 33.62 324.88 33.12 324.69 32.19 324.75 18.88 324.56 18.25 324.31 17.94 323.62 17.69 316.25 17.69 315.56 17.94ZM343.44 24.94 343.19 25.81 343.00 27.94 343.12 30.44 343.44 31.75 344.38 33.69 345.50 35.12 347.38 36.75 349.62 37.94 352.44 38.81 356.44 39.31 360.69 39.38 364.88 39.00 366.19 38.75 369.19 37.75 370.81 36.88 372.56 35.50 373.62 34.25 374.69 32.25 374.56 31.56 374.12 31.25 365.81 31.19 364.75 31.56 363.31 32.75 362.50 33.19 360.75 33.62 358.56 33.75 356.75 33.44 355.50 33.00 354.25 32.06 353.25 30.75 352.75 29.50 352.62 28.81 352.75 27.19 353.19 26.06 353.81 25.06 354.62 24.25 355.88 23.50 356.94 23.12 358.12 22.94 360.12 22.94 361.44 23.12 363.25 23.88 364.75 25.06 365.75 25.44 374.06 25.38 374.56 25.00 374.62 24.25 374.00 23.00 373.06 21.75 372.00 20.69 370.06 19.38 367.31 18.25 364.12 17.56 362.69 17.38 357.69 17.25 354.69 17.50 350.88 18.31 348.19 19.44 346.25 20.81 344.62 22.62Z"/></svg>
+    <nav class="footer-grid" aria-label="Footer">
+      <div class="footer-col">
+        <h2 class="footer-heading">Apps</h2>
+        <a href="index.html#steerjobs">SteerJobs</a>
+        <a href="index.html#shiftjar">ShiftJar</a>
+        <a href="index.html#yourbpm">YourBPM</a>
+        <a href="index.html#voyager">Voyager</a>
+        <a href="index.html#paverlab">PaverLab</a>
+        <a href="index.html#buildifyos">BuildifyOS</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Websites</h2>
+        <a href="websites.html#pricing">Pricing</a>
+        <a href="websites.html#work">Recent work</a>
+        <a href="websites.html#care">What $99 covers</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Company</h2>
+        <a href="support.html">Support</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Contact</h2>
+        <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>
+        <a href="mailto:hello@westmardev.com?subject=Website">Get a website quote</a>
+      </div>
+    </nav>
+    <div class="footer-bottom"><span>© 2026 Westmar LLC. A Mello family company.</span><span>Bradenton, Florida</span></div>
   </div>
-  <nav class="footer-nav" aria-label="Footer">
-    <a href="websites.html" aria-current="page">Websites</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="support.html">Support</a>
-    <a href="mailto:hello@westmardev.com">Contact</a>
-  </nav>
 </footer>
 
 <script src="app.js" defer></script>

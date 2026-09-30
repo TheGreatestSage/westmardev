@@ -1,21 +1,24 @@
 # westmardev
 
 Marketing site for **Westmar LLC** — a static, dependency-free build of the
-"WESTMAR site redesign" boards from Claude Design (Main = light, Dark = dark).
+"Apple-inspired website redesign" boards from Claude Design (Home, Websites,
+Support, Privacy, Terms, plus the shared SiteNav and SiteFooter).
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — header, hero, lanes, apps lineup, proof band, FAQ, CTA, footer |
-| `websites.html` | Websites for contractors — pricing, recent work, site care |
-| `support.html`, `privacy.html`, `terms.html` | Support and legal pages |
-| `styles.css` | All styling and design tokens, shared by every page |
-| `app.js` | Theme toggle and FAQ accordion |
-| `favicon.svg`, `apple-touch-icon.png` | Site icons — the W is the Anybody 900 outline as a path (no font needed) |
+| `index.html` | Home — TestFlight ribbon, hero, app tiles, why, websites promo, FAQ, contact |
+| `websites.html` | Websites for contractors — pricing, recent work, what $99 covers |
+| `support.html` | Support — what to include, common questions |
+| `privacy.html`, `terms.html` | Legal pages with an "On this page" list on wide screens |
+| `styles.css` | Design tokens and all styling, shared by every page |
+| `app.js` | Mobile menu, FAQ accordion, Home's live numbers |
+| `img/westmar-logo.svg` | The logo; inlined in every page's header and footer |
+| `favicon.svg`, `apple-touch-icon.png` | The logo's own W on white |
 
-No build step, no dependencies. Fonts (Anybody for the wordmark and display
-caps, Archivo for body text) load from Google Fonts; icons are inline SVGs.
+No build step, no dependencies. Geist (400–700) loads from Google Fonts; the
+wordmark is the inline logo SVG, not type.
 
 ## Run locally
 
@@ -24,34 +27,44 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-## Theming
+## Design tokens
 
-Colors are CSS custom properties at the top of `styles.css`. Light is the
-default for everyone, regardless of OS setting. Dark mode overrides the same
-tokens under `[data-theme="dark"]` on `<html>`:
+Light only. Colours are CSS custom properties at the top of `styles.css`, taken
+from the export; sizes keep the export's `clamp()` values and auto-fit grids,
+so layouts follow the boards at every width.
 
-| Token | Light | Dark |
+| Token | Value | Used for |
 | --- | --- | --- |
-| `--bg` | `#FFFFFF` | `#000000` |
-| `--band` | `#F2F2F0` | `#121212` |
-| `--ink` (headings, 2px rules) | `#000000` | `#FFFFFF` |
-| `--text` | `#262626` | `#E6E6E6` |
-| `--body` | `#3D3D3D` | `#B5B5B5` |
-| `--muted` | `#5E5E5E` | `#A3A3A3` |
-| `--rule` | `#D9D9D9` | `#2B2B2B` |
-| `--red` / `--red-hover` (fills) | `#C72020` / `#A51A1A` | same |
-| `--red-text` (red type) | `#C72020` | `#D35151` |
-| `--inverse` (inverse blocks) | `#000000` | `#FFFFFF` |
+| `--ink` | `#121212` | Headings, body text, the logo's LLC |
+| `--red` / `--red-hover` | `#C72020` / `#A51A1A` | Links, buttons, the logo's WESTMAR |
+| `--tile` | `#f4f4f2` | Tiles, ribbon, footer |
+| `--muted` / `--muted-2` | `#5c5c57` / `#6b6b66` | Secondary text |
+| `--dark` / `--darker` | `#111111` / `#0c0c0c` | ShiftJar, Full site, Voyager tiles |
+| `--red-on-dark` | `#E35D5A` | Links and focus rings on dark tiles |
 
-The header toggle stores the choice in `localStorage` (`theme`). Each page
-has a one-line inline script in `<head>`, before the stylesheets, that
-re-applies a saved dark choice so dark mode never flashes on load.
+## Shared header and footer
 
-## Editing content
+The header (SiteNav) and footer (SiteFooter) are the same markup on every page,
+logo included. When you change one, change all five pages. Only Home adds the
+footer's status note.
 
-Apps, proof points, FAQ entries, pricing tiers and portfolio items are plain
-markup. App status pills are `pill-beta`, `pill-dev` or `pill-soon`. The
-TradeKit row in `index.html` is commented out until its copy exists.
+In the inline logo, the WESTMAR path is `#C72020` and the LLC path is
+`fill="currentColor"`, coloured `#121212` by the surrounding CSS.
+
+## Behaviour (`app.js`)
+
+- **Menu** (under 760px): full-screen panel. The page behind it is inert and
+  locked, Tab stays inside, and Escape or any link closes it.
+- **FAQ**: one answer open at a time, the first open on load.
+- **Live numbers** (Home): Voyager's odometer counts 370 km/s since the page
+  loaded and YourBPM's reading wobbles around 148. They pause while the tab is
+  hidden. With reduced motion they show fixed values (22,200 km, 147 BPM).
+
+## Legal pages
+
+The policy text is authoritative and kept exactly as written. Section numbers
+are CSS counters, and the `id`s on each `<h2>` feed the "On this page" list, so
+edits to the text never need matching edits elsewhere.
 
 ## Deploying
 

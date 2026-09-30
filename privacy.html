@@ -7,38 +7,41 @@
 <meta name="description" content="How Westmar LLC handles data across its iOS apps: what each app collects, what leaves your device, and how to request deletion or a copy.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125..150,800..900&family=Archivo:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HEADER -->
-<header class="site-header shell">
-  <a class="wordmark" href="index.html" aria-label="Westmar LLC home">
-    <span class="wordmark-name">Westmar</span>
-    <span class="wordmark-llc">LLC</span>
-  </a>
-  <nav class="site-nav" aria-label="Main">
-    <a class="nav-link" href="index.html#apps">Apps</a>
-    <a class="nav-link" href="websites.html">Websites</a>
-    <a class="nav-link" href="index.html#faq">FAQ</a>
-    <a class="nav-link" href="support.html">Support</a>
-    <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Dark mode">
-        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </button>
-      <a class="btn btn-inverse" href="mailto:hello@westmardev.com">Contact</a>
+<!-- HEADER (SiteNav) -->
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="index.html" aria-label="Westmar LLC home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="7.06 17.25 367.69 22.19" aria-hidden="true" focusable="false"><path fill="#C72020" fill-rule="evenodd" d="M7.06 18.31 7.06 18.75 7.25 19.31 7.81 20.12 8.25 21.19 9.81 23.94 10.31 25.12 10.75 25.75 12.38 29.06 12.81 29.69 13.31 30.88 14.94 33.75 16.56 37.06 17.44 38.50 17.75 38.75 18.44 39.00 24.75 39.00 25.38 38.81 25.81 38.50 26.38 37.62 26.88 36.12 27.44 35.06 27.81 33.88 28.50 32.50 28.81 31.44 29.44 30.25 29.88 28.88 30.94 26.50 31.31 26.19 31.56 26.19 32.06 26.56 32.62 27.56 33.00 28.88 33.69 30.19 34.06 31.44 34.69 32.56 35.06 33.88 35.75 35.19 36.06 36.31 36.69 37.44 37.06 38.44 37.38 38.81 37.81 39.00 44.50 39.00 45.12 38.75 45.75 38.12 47.38 34.81 47.75 34.31 48.25 33.12 48.69 32.50 49.25 31.19 50.88 28.31 55.81 18.75 55.75 18.06 55.25 17.69 47.56 17.69 46.56 18.06 46.19 18.56 45.94 19.38 45.25 20.62 44.88 21.88 44.19 23.12 43.88 24.19 43.25 25.31 42.81 26.69 42.19 27.81 41.81 29.06 41.50 29.62 41.00 30.12 40.50 30.25 40.12 29.94 39.69 28.69 39.00 27.50 38.81 26.81 38.00 25.31 37.75 24.50 36.94 23.00 36.69 22.19 36.00 21.00 35.69 20.00 34.56 18.06 34.19 17.81 33.69 17.69 29.69 17.62 28.94 17.81 28.50 18.06 28.00 18.62 23.62 28.00 23.06 29.44 22.56 30.00 21.94 30.12 21.69 30.00 21.31 29.50 21.00 28.50 20.50 27.56 19.94 26.00 19.50 25.25 18.94 23.69 18.38 22.69 16.94 19.06 16.19 18.06 15.25 17.62 7.62 17.69 7.19 18.00ZM59.50 18.19 59.25 18.88 59.25 37.94 59.69 38.75 60.69 39.06 85.94 39.06 86.38 39.00 86.81 38.69 87.06 38.06 87.06 34.75 86.81 34.06 86.31 33.69 69.88 33.69 69.44 33.50 69.12 33.19 68.88 32.50 68.88 31.50 69.00 31.06 69.50 30.44 69.88 30.31 82.38 30.31 82.94 29.88 83.12 29.44 83.12 27.44 82.94 26.75 82.38 26.25 69.88 26.25 69.44 26.06 69.00 25.50 68.88 25.06 68.88 24.00 69.19 23.31 69.88 22.94 85.06 22.88 85.62 22.50 85.88 21.88 85.88 18.88 85.50 18.00 84.88 17.69 84.31 17.62 60.50 17.62 59.81 17.88ZM91.38 21.38 90.31 23.06 89.81 24.88 89.81 25.62 90.06 26.62 90.50 27.50 91.12 28.19 92.00 28.88 93.81 29.69 95.56 30.19 101.88 30.94 106.06 31.19 106.81 31.44 107.12 31.81 107.12 32.31 106.62 33.00 105.44 33.50 104.50 33.69 103.19 33.69 101.81 33.38 101.12 33.06 100.38 32.50 99.44 32.19 91.12 32.19 90.56 32.38 90.25 32.81 90.25 33.44 90.62 34.25 91.50 35.50 92.69 36.69 94.12 37.62 97.44 38.88 100.94 39.31 105.94 39.38 109.06 39.06 110.88 38.69 113.31 37.75 115.00 36.62 115.81 35.81 116.75 34.56 117.75 32.31 117.88 31.56 117.81 30.69 117.56 29.94 116.94 28.94 116.31 28.25 115.56 27.69 113.44 26.75 109.12 25.88 101.62 25.38 101.00 25.06 100.69 24.56 100.75 24.12 101.19 23.56 101.88 23.19 103.00 22.94 105.25 23.06 107.50 24.12 108.62 24.38 116.06 24.50 117.00 24.25 117.25 23.88 117.25 23.19 116.75 22.06 115.38 20.38 113.50 19.06 111.69 18.25 108.94 17.56 107.69 17.38 105.94 17.25 101.62 17.25 99.94 17.38 98.12 17.69 95.44 18.44 93.19 19.62ZM120.44 17.88 120.19 18.25 120.06 18.75 120.00 21.00 120.06 22.06 120.44 22.75 120.88 22.94 128.19 22.94 128.62 23.12 129.12 23.75 129.12 37.75 129.38 38.50 129.69 38.81 130.19 39.00 137.81 39.00 138.50 38.69 138.88 37.88 138.81 24.12 139.00 23.50 139.38 23.12 139.81 22.94 147.19 22.94 147.62 22.69 147.94 21.94 147.88 18.50 147.69 18.06 147.38 17.75 147.00 17.62 121.25 17.62ZM151.62 18.44 151.50 18.88 151.50 38.00 151.75 38.56 152.31 38.94 160.19 39.06 160.88 38.69 161.12 38.00 161.06 27.44 161.25 26.81 161.56 26.56 161.81 26.62 162.81 27.75 164.31 30.31 169.38 38.12 169.75 38.56 170.38 38.94 176.31 39.00 177.31 38.62 179.69 35.12 184.19 27.88 185.31 26.44 185.56 26.44 185.75 26.62 185.94 27.12 185.94 38.12 186.12 38.62 186.44 38.94 186.94 39.06 194.06 39.06 194.88 38.88 195.44 38.25 195.56 37.50 195.50 18.81 195.25 18.19 194.75 17.75 194.31 17.62 184.75 17.62 184.19 17.88 183.19 18.88 174.50 31.62 173.75 32.19 173.19 32.12 172.62 31.62 163.94 19.00 162.75 17.81 162.25 17.62 152.94 17.62 152.06 17.88ZM199.19 38.00 199.25 38.62 199.94 39.00 207.62 39.00 208.44 38.62 208.94 38.06 210.00 36.38 210.56 35.81 211.38 35.44 224.38 35.44 225.44 36.00 227.06 38.44 227.44 38.81 227.94 39.00 235.31 39.06 236.25 38.81 236.50 38.38 236.44 37.94 235.94 37.06 234.38 35.06 223.75 19.62 222.38 17.94 221.50 17.69 214.19 17.69 213.31 18.00 212.12 19.44 201.00 35.44 199.50 37.38ZM214.50 29.19 214.94 28.31 215.69 27.31 217.06 25.00 217.50 24.56 218.00 24.44 218.38 24.56 218.81 25.06 220.12 27.38 220.94 28.50 221.31 29.56 221.06 30.00 220.31 30.25 215.31 30.25 214.62 29.88ZM240.12 18.31 239.94 18.75 239.88 19.38 239.88 37.81 240.06 38.38 240.50 38.81 241.12 39.00 248.69 39.00 249.25 38.81 249.50 38.56 249.75 37.81 249.75 33.69 250.06 33.06 250.56 32.75 256.38 32.81 258.19 33.06 259.19 33.44 260.75 34.94 262.12 38.44 262.62 38.88 264.38 39.00 271.25 39.06 271.75 38.88 272.12 38.38 272.12 37.44 271.06 33.94 270.44 33.00 269.06 31.81 268.94 31.31 269.06 31.00 269.50 30.56 270.25 30.12 271.00 29.44 271.75 28.44 272.06 27.81 272.44 25.81 272.38 24.25 272.06 22.75 271.81 22.19 270.94 21.00 269.56 19.88 268.44 19.25 265.62 18.38 264.00 18.12 261.88 18.06 258.94 17.75 241.44 17.62 240.44 17.94ZM249.69 24.19 249.88 23.44 250.19 23.06 250.56 22.88 258.25 23.00 259.94 23.31 261.12 23.94 261.69 24.56 261.81 25.50 261.62 26.00 261.06 26.56 260.31 27.00 259.19 27.31 257.44 27.50 250.50 27.56 250.00 27.19 249.69 26.44Z"/><path fill="currentColor" fill-rule="evenodd" d="M284.94 18.12 284.69 19.00 284.69 37.75 284.81 38.38 285.19 38.88 285.75 39.06 310.56 39.00 310.94 38.88 311.38 38.50 311.62 37.81 311.62 35.12 311.31 34.19 310.69 33.75 295.50 33.75 294.88 33.50 294.44 33.00 294.25 32.19 294.31 18.88 294.12 18.31 293.69 17.88 293.12 17.69 285.75 17.62 285.31 17.75ZM315.19 18.31 315.00 18.81 314.94 19.69 314.94 37.62 315.06 38.19 315.50 38.75 316.19 39.00 341.06 39.00 341.44 38.88 341.81 38.50 342.00 37.81 342.00 35.12 341.75 34.19 341.19 33.75 325.69 33.81 325.25 33.62 324.88 33.12 324.69 32.19 324.75 18.88 324.56 18.25 324.31 17.94 323.62 17.69 316.25 17.69 315.56 17.94ZM343.44 24.94 343.19 25.81 343.00 27.94 343.12 30.44 343.44 31.75 344.38 33.69 345.50 35.12 347.38 36.75 349.62 37.94 352.44 38.81 356.44 39.31 360.69 39.38 364.88 39.00 366.19 38.75 369.19 37.75 370.81 36.88 372.56 35.50 373.62 34.25 374.69 32.25 374.56 31.56 374.12 31.25 365.81 31.19 364.75 31.56 363.31 32.75 362.50 33.19 360.75 33.62 358.56 33.75 356.75 33.44 355.50 33.00 354.25 32.06 353.25 30.75 352.75 29.50 352.62 28.81 352.75 27.19 353.19 26.06 353.81 25.06 354.62 24.25 355.88 23.50 356.94 23.12 358.12 22.94 360.12 22.94 361.44 23.12 363.25 23.88 364.75 25.06 365.75 25.44 374.06 25.38 374.56 25.00 374.62 24.25 374.00 23.00 373.06 21.75 372.00 20.69 370.06 19.38 367.31 18.25 364.12 17.56 362.69 17.38 357.69 17.25 354.69 17.50 350.88 18.31 348.19 19.44 346.25 20.81 344.62 22.62Z"/></svg></a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html#apps">Apps</a>
+      <a class="nav-link" href="websites.html">Websites</a>
+      <a class="nav-link" href="support.html">Support</a>
+      <a class="nav-link" href="index.html#faq">FAQ</a>
+      <a class="nav-contact" href="mailto:hello@westmardev.com">Contact</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-panel">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
+    <div class="nav-panel" id="nav-panel" hidden>
+      <a class="nav-panel-link" href="index.html#apps">Apps</a>
+      <a class="nav-panel-link" href="websites.html">Websites</a>
+      <a class="nav-panel-link" href="support.html">Support</a>
+      <a class="nav-panel-link" href="index.html#faq">FAQ</a>
+      <a class="nav-panel-contact" href="mailto:hello@westmardev.com">Contact</a>
     </div>
   </nav>
 </header>
 
-<main id="main" class="shell">
+<main id="main" class="legal-privacy">
 
   <!-- PAGE HEAD -->
   <header class="legal-head">
@@ -47,160 +50,201 @@
     <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: each app collects only what it needs to work, no app contains an analytics or advertising SDK, and none of your data is ever sold.</p>
   </header>
 
-  <!-- BODY -->
-  <div class="legal">
+  <div class="legal-layout">
+    <nav class="legal-toc" aria-label="On this page">
+      <span class="legal-toc-title">On this page</span>
+      <a href="#p-who">Who we are</a>
+      <a href="#p-collects">What each app collects</a>
+      <a href="#p-noads">No analytics. No ads. No tracking.</a>
+      <a href="#p-isolated">Each app's data stays isolated</a>
+      <a href="#p-never">What is never done with your data</a>
+      <a href="#p-third">Third-party services</a>
+      <a href="#p-rights">Your rights</a>
+      <a href="#p-ccpa">California (CCPA/CPRA)</a>
+      <a href="#p-gdpr">UK and Europe (GDPR)</a>
+      <a href="#p-children">Children's privacy</a>
+      <a href="#p-security">Security</a>
+      <a href="#p-changes">Changes to this policy</a>
+      <a href="#p-contact">Contact</a>
+    </nav>
 
-    <h2>Who we are</h2>
-    <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, YourBPM, ShiftJar, and PaverLab.</p>
-    <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>. Messages go directly to the person who wrote the code.</p>
+    <!-- BODY -->
+    <div class="legal">
 
-    <h2>What each app collects</h2>
-    <p>Westmar apps do not share a common account system. Each app collects its own data for its own purpose, and that list is specific to the app you are using.</p>
+      <h2 id="p-who">Who we are</h2>
+      <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, YourBPM, ShiftJar, and PaverLab.</p>
+      <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>. Messages go directly to the person who wrote the code.</p>
 
-    <h3>SteerJobs</h3>
-    <p>SteerJobs is a business tool, not a personal one. It is bought by a construction company and used by that company's crew, and the company can see what its crew submits. That is the point of the product, and you should know it before you use it.</p>
-    <ul>
-      <li><strong>Account information</strong> — the email address used to sign in, and the company you belong to.</li>
-      <li><strong>Job site photos</strong> — images you capture to document work phases. A company admin reviews and approves each phase, so admins see the photos crew members submit.</li>
-      <li><strong>Job documents and resumes</strong> — files uploaded to a job or a personnel record.</li>
-      <li><strong>Check-in location</strong> — GPS coordinates recorded at the moment you check in, used to confirm presence on a job site. Location is captured at check-in only. SteerJobs does not track your location in the background or between check-ins.</li>
-      <li><strong>Hours and work records</strong> — hours logged per user per job, phase status, and job progress. Company admins can see weekly hours per user per job.</li>
-    </ul>
-    <p>All of it is stored in Supabase, in the United States (us-east-1). Photos, job documents, and resumes live in storage buckets scoped to a single company. Every database table enforces row-level security keyed on company ID, so visibility ends at the company boundary — one company can never see another company's data.</p>
-    <p><strong>How long it is kept:</strong> job and photo records are retained for as long as the company's account is active, because a construction record is worth little if it disappears mid-project. There is no automatic purge. Data is deleted when you or your company asks, within 30 days of the request.</p>
+      <h2 id="p-collects">What each app collects</h2>
+      <p>Westmar apps do not share a common account system. Each app collects its own data for its own purpose, and that list is specific to the app you are using.</p>
 
-    <h3>Voyager: Cosmic Odometer</h3>
-    <p>Voyager calculates how fast you are moving through the universe. That math needs your latitude, because the Earth-rotation component of your speed depends on how far you are from the equator.</p>
-    <ul>
-      <li><strong>Coarse latitude</strong> — requested once, at an accuracy of roughly three kilometres. Voyager asks for "when in use" location permission, takes a single reading, keeps only the latitude number, and discards the rest.</li>
-    </ul>
-    <p>That latitude never leaves your phone. Voyager has no networking code of any kind — there is no server for it to send anything to. Decline the location prompt and the app still works; it falls back to a default latitude and every other feature behaves normally.</p>
-    <p>Voyager offers a one-time $2.99 Pro unlock through Apple's in-app purchase system. Apple processes the payment and tells the app whether you own it. Westmar never sees your payment details.</p>
+      <h3>SteerJobs</h3>
+      <p>SteerJobs is a business tool, not a personal one. It is bought by a construction company and used by that company's crew, and the company can see what its crew submits. That is the point of the product, and you should know it before you use it.</p>
+      <ul>
+        <li><strong>Account information</strong> — the email address used to sign in, and the company you belong to.</li>
+        <li><strong>Job site photos</strong> — images you capture to document work phases. A company admin reviews and approves each phase, so admins see the photos crew members submit.</li>
+        <li><strong>Job documents and resumes</strong> — files uploaded to a job or a personnel record.</li>
+        <li><strong>Check-in location</strong> — GPS coordinates recorded at the moment you check in, used to confirm presence on a job site. Location is captured at check-in only. SteerJobs does not track your location in the background or between check-ins.</li>
+        <li><strong>Hours and work records</strong> — hours logged per user per job, phase status, and job progress. Company admins can see weekly hours per user per job.</li>
+      </ul>
+      <p>All of it is stored in Supabase, in the United States (us-east-1). Photos, job documents, and resumes live in storage buckets scoped to a single company. Every database table enforces row-level security keyed on company ID, so visibility ends at the company boundary — one company can never see another company's data.</p>
+      <p><strong>How long it is kept:</strong> job and photo records are retained for as long as the company's account is active, because a construction record is worth little if it disappears mid-project. There is no automatic purge. Data is deleted when you or your company asks, within 30 days of the request.</p>
 
-    <h3>YourBPM</h3>
-    <p>YourBPM has not been released. There is no public build, no server, and no user data. When it ships, this section will describe exactly what it reads — including any Apple Health access — and that description will be published here before the app is available to anyone.</p>
+      <h3>Voyager: Cosmic Odometer</h3>
+      <p>Voyager calculates how fast you are moving through the universe. That math needs your latitude, because the Earth-rotation component of your speed depends on how far you are from the equator.</p>
+      <ul>
+        <li><strong>Coarse latitude</strong> — requested once, at an accuracy of roughly three kilometres. Voyager asks for "when in use" location permission, takes a single reading, keeps only the latitude number, and discards the rest.</li>
+      </ul>
+      <p>That latitude never leaves your phone. Voyager has no networking code of any kind — there is no server for it to send anything to. Decline the location prompt and the app still works; it falls back to a default latitude and every other feature behaves normally.</p>
+      <p>Voyager offers a one-time $2.99 Pro unlock through Apple's in-app purchase system. Apple processes the payment and tells the app whether you own it. Westmar never sees your payment details.</p>
 
-    <h3>ShiftJar</h3>
-    <p>ShiftJar is a tip tracker for restaurant servers and bartenders. It has no account system, no login, and no Westmar server behind it.</p>
-    <ul>
-      <li><strong>Shift records</strong> — tips, hours, tip-outs, job name, and any notes you add. Entered by you, stored on your device.</li>
-    </ul>
-    <p>If you are signed into iCloud, shift records sync through Apple's CloudKit to your private iCloud database — the part of iCloud only your Apple ID can reach. Westmar cannot see, query, or retrieve it; Apple's infrastructure moves it between your own devices. With iCloud off, ShiftJar stores everything locally and works fully offline.</p>
-    <p>CSV export is user-initiated: the file is generated on your device and goes only where you choose to send it.</p>
-    <p><strong>How long it is kept:</strong> as long as you keep it. Data lives on your device and in your iCloud, not with Westmar. Deleting the app removes its local data; iCloud copies can be removed from iOS Settings or within the app.</p>
-    <p>Because Westmar holds no ShiftJar data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+      <h3>YourBPM</h3>
+      <p>YourBPM has not been released. There is no public build, no server, and no user data. When it ships, this section will describe exactly what it reads — including any Apple Health access — and that description will be published here before the app is available to anyone.</p>
 
-    <h3>PaverLab</h3>
-    <p>PaverLab is a paver-installation training app — guided lessons, labs that grade a design against spec, and a freeform pattern sandbox. It is bought once, through the App Store. It has no account system, no login, and no Westmar server behind it.</p>
-    <ul>
-      <li><strong>Lesson progress</strong> — which lessons you have opened and completed, how far you got in each, and your knowledge-check scores. Stored in a local database on your device.</li>
-      <li><strong>Lab and Sandbox inputs</strong> — the dimensions, materials, and layouts you enter to check a design. They stay on your device.</li>
-    </ul>
-    <p>None of it leaves your phone. PaverLab has no networking code of any kind and does not use iCloud — there is no server for it to send anything to and no sync between devices. It works fully offline.</p>
-    <p>Apple processes the purchase. Westmar never sees your payment details.</p>
-    <p><strong>How long it is kept:</strong> as long as the app is installed. Deleting the app removes it.</p>
-    <p>Because Westmar holds no PaverLab data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+      <h3>ShiftJar</h3>
+      <p>ShiftJar is a tip tracker for restaurant servers and bartenders. It has no account system, no login, and no Westmar server behind it.</p>
+      <ul>
+        <li><strong>Shift records</strong> — tips, hours, tip-outs, job name, and any notes you add. Entered by you, stored on your device.</li>
+      </ul>
+      <p>If you are signed into iCloud, shift records sync through Apple's CloudKit to your private iCloud database — the part of iCloud only your Apple ID can reach. Westmar cannot see, query, or retrieve it; Apple's infrastructure moves it between your own devices. With iCloud off, ShiftJar stores everything locally and works fully offline.</p>
+      <p>CSV export is user-initiated: the file is generated on your device and goes only where you choose to send it.</p>
+      <p><strong>How long it is kept:</strong> as long as you keep it. Data lives on your device and in your iCloud, not with Westmar. Deleting the app removes its local data; iCloud copies can be removed from iOS Settings or within the app.</p>
+      <p>Because Westmar holds no ShiftJar data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
 
-    <h2>No analytics. No ads. No tracking.</h2>
-    <p>This is worth stating flatly rather than burying in a list: <strong>no Westmar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No Westmar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
-    <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
+      <h3>PaverLab</h3>
+      <p>PaverLab is a paver-installation training app — guided lessons, labs that grade a design against spec, and a freeform pattern sandbox. It is bought once, through the App Store. It has no account system, no login, and no Westmar server behind it.</p>
+      <ul>
+        <li><strong>Lesson progress</strong> — which lessons you have opened and completed, how far you got in each, and your knowledge-check scores. Stored in a local database on your device.</li>
+        <li><strong>Lab and Sandbox inputs</strong> — the dimensions, materials, and layouts you enter to check a design. They stay on your device.</li>
+      </ul>
+      <p>None of it leaves your phone. PaverLab has no networking code of any kind and does not use iCloud — there is no server for it to send anything to and no sync between devices. It works fully offline.</p>
+      <p>Apple processes the purchase. Westmar never sees your payment details.</p>
+      <p><strong>How long it is kept:</strong> as long as the app is installed. Deleting the app removes it.</p>
+      <p>Because Westmar holds no PaverLab data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
 
-    <h2>Each app's data stays isolated</h2>
-    <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar and PaverLab have no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
-    <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
+      <h2 id="p-noads">No analytics. No ads. No tracking.</h2>
+      <p>This is worth stating flatly rather than burying in a list: <strong>no Westmar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No Westmar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
+      <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
 
-    <h2>What is never done with your data</h2>
-    <ul>
-      <li>Your data is <strong>never sold</strong>, to anyone, for any price.</li>
-      <li>Your data is <strong>never shared with advertisers</strong>, ad networks, or data brokers.</li>
-      <li>Your data is <strong>never used to train machine learning models</strong>.</li>
-      <li>Your job site photos are never used for marketing, case studies, or App Store screenshots without your written permission.</li>
-    </ul>
-    <p>These are not aspirations subject to a future policy update — they are the operating rules across every Westmar app.</p>
+      <h2 id="p-isolated">Each app's data stays isolated</h2>
+      <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar and PaverLab have no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
+      <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
 
-    <h2>Third-party services</h2>
-    <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job.</p>
-    <ul>
-      <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes app purchases and in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell Westmar who individual users are. Apple's own privacy policy governs that data.</li>
-      <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs and ShiftJar. If you join a beta, Apple shares your email address with Westmar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
-      <li><strong>Apple iCloud (CloudKit)</strong> — syncs ShiftJar data between your devices through your Apple ID's private database. Apple hosts it under your account; Westmar has no access to its contents.</li>
-      <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on Westmar's instructions.</li>
-      <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; Westmar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
-      <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
-    </ul>
+      <h2 id="p-never">What is never done with your data</h2>
+      <ul>
+        <li>Your data is <strong>never sold</strong>, to anyone, for any price.</li>
+        <li>Your data is <strong>never shared with advertisers</strong>, ad networks, or data brokers.</li>
+        <li>Your data is <strong>never used to train machine learning models</strong>.</li>
+        <li>Your job site photos are never used for marketing, case studies, or App Store screenshots without your written permission.</li>
+      </ul>
+      <p>These are not aspirations subject to a future policy update — they are the operating rules across every Westmar app.</p>
 
-    <h2>Your rights</h2>
-    <p>Wherever you live, you can ask Westmar to:</p>
-    <ul>
-      <li><strong>Delete your data</strong> — have the data associated with your use of an app erased.</li>
-      <li><strong>Get a copy of your data</strong> — receive an export of what an app holds about you, in a readable format.</li>
-      <li><strong>Correct your data</strong> — fix anything inaccurate.</li>
-    </ul>
-    <p>Email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
-    <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, Westmar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
-    <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone. The same goes for PaverLab: its only record is your lesson progress, which sits on your device and nowhere else, and deleting the app is the deletion.</p>
+      <h2 id="p-third">Third-party services</h2>
+      <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job.</p>
+      <ul>
+        <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes app purchases and in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell Westmar who individual users are. Apple's own privacy policy governs that data.</li>
+        <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs and ShiftJar. If you join a beta, Apple shares your email address with Westmar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
+        <li><strong>Apple iCloud (CloudKit)</strong> — syncs ShiftJar data between your devices through your Apple ID's private database. Apple hosts it under your account; Westmar has no access to its contents.</li>
+        <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on Westmar's instructions.</li>
+        <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; Westmar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
+        <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
+      </ul>
 
-    <h2>California privacy rights (CCPA/CPRA)</h2>
-    <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>.</p>
-    <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), professional information (hours and job records), and financial information (ShiftJar shift and tip records, which stay on your device and in your private iCloud and never reach Westmar's systems). They are collected to operate the apps, and for no other purpose.</p>
-    <p><strong>Westmar does not sell personal information and does not share it for cross-context behavioural advertising.</strong> That has never happened and there is no mechanism in any app that could make it happen — there is no advertising SDK to send it to. Because nothing is sold or shared in that sense, there is no "Do Not Sell or Share My Personal Information" link to offer. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
+      <h2 id="p-rights">Your rights</h2>
+      <p>Wherever you live, you can ask Westmar to:</p>
+      <ul>
+        <li><strong>Delete your data</strong> — have the data associated with your use of an app erased.</li>
+        <li><strong>Get a copy of your data</strong> — receive an export of what an app holds about you, in a readable format.</li>
+        <li><strong>Correct your data</strong> — fix anything inaccurate.</li>
+      </ul>
+      <p>Email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
+      <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, Westmar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
+      <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone. The same goes for PaverLab: its only record is your lesson progress, which sits on your device and nowhere else, and deleting the app is the deletion.</p>
 
-    <h2>UK and European privacy rights (GDPR)</h2>
-    <p>If you are in the United Kingdom or the European Economic Area, Westmar LLC is the data controller for the data described in this policy.</p>
-    <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, and PaverLab's lesson progress stays on your device; Westmar never receives either, so there is no Westmar processing to base.</p>
-    <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and are answered within 30 days.</p>
-    <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of Westmar's agreement with Supabase.</p>
-    <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with Westmar first is welcome but not required.</p>
-    <p><strong>EU representative.</strong> Westmar has not appointed an Article 27 representative in the EU or UK. Westmar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
+      <h2 id="p-ccpa">California privacy rights (CCPA/CPRA)</h2>
+      <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>.</p>
+      <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), professional information (hours and job records), and financial information (ShiftJar shift and tip records, which stay on your device and in your private iCloud and never reach Westmar's systems). They are collected to operate the apps, and for no other purpose.</p>
+      <p><strong>Westmar does not sell personal information and does not share it for cross-context behavioural advertising.</strong> That has never happened and there is no mechanism in any app that could make it happen — there is no advertising SDK to send it to. Because nothing is sold or shared in that sense, there is no "Do Not Sell or Share My Personal Information" link to offer. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
 
-    <h2>Children's privacy</h2>
-    <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact.</p>
-    <p>Westmar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and it will be deleted promptly.</p>
+      <h2 id="p-gdpr">UK and European privacy rights (GDPR)</h2>
+      <p>If you are in the United Kingdom or the European Economic Area, Westmar LLC is the data controller for the data described in this policy.</p>
+      <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, and PaverLab's lesson progress stays on your device; Westmar never receives either, so there is no Westmar processing to base.</p>
+      <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and are answered within 30 days.</p>
+      <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of Westmar's agreement with Supabase.</p>
+      <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with Westmar first is welcome but not required.</p>
+      <p><strong>EU representative.</strong> Westmar has not appointed an Article 27 representative in the EU or UK. Westmar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
 
-    <h2>Security</h2>
-    <p>What is actually in place, stated without embellishment:</p>
-    <ul>
-      <li>All data in transit is encrypted with TLS.</li>
-      <li>Data at rest in Supabase is encrypted using Supabase's platform encryption.</li>
-      <li>ShiftJar data in iCloud is encrypted in transit and at rest under Apple's CloudKit security model, inside your personal Apple ID account.</li>
-      <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
-      <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
-    </ul>
-    <p>What is deliberately <em>not</em> claimed: Westmar holds no SOC 2 certification, has not commissioned a third-party penetration test, and does not use end-to-end encryption. No system is perfectly secure. The most effective protection here is that very little is collected in the first place.</p>
-    <p>If a breach affects your data, you will be told by email, and the relevant regulators will be notified within the deadlines the law sets — 72 hours under GDPR, and whatever the applicable US state law requires.</p>
+      <h2 id="p-children">Children's privacy</h2>
+      <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact.</p>
+      <p>Westmar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and it will be deleted promptly.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>When this policy changes, the "Last updated" date at the top of this page changes with it. Material changes — anything that meaningfully affects what is collected or how it is used — will additionally be announced through an in-app notice or an email to affected users before the change takes effect.</p>
-    <p>Previous versions are available on request. Continuing to use a Westmar app after a change takes effect means the revised policy applies to you.</p>
+      <h2 id="p-security">Security</h2>
+      <p>What is actually in place, stated without embellishment:</p>
+      <ul>
+        <li>All data in transit is encrypted with TLS.</li>
+        <li>Data at rest in Supabase is encrypted using Supabase's platform encryption.</li>
+        <li>ShiftJar data in iCloud is encrypted in transit and at rest under Apple's CloudKit security model, inside your personal Apple ID account.</li>
+        <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
+        <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
+      </ul>
+      <p>What is deliberately <em>not</em> claimed: Westmar holds no SOC 2 certification, has not commissioned a third-party penetration test, and does not use end-to-end encryption. No system is perfectly secure. The most effective protection here is that very little is collected in the first place.</p>
+      <p>If a breach affects your data, you will be told by email, and the relevant regulators will be notified within the deadlines the law sets — 72 hours under GDPR, and whatever the applicable US state law requires.</p>
 
-    <h2>Contact</h2>
-    <p>Privacy questions, deletion requests, and data exports all go to the same place:</p>
-    <address>
-      <span class="legal-address-name">Westmar LLC</span>
-      Attn: Nicholas Mello<br>
-      506 Park Dr.<br>
-      Bradenton, FL 34209<br>
-      United States<br>
-      <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>
-    </address>
+      <h2 id="p-changes">Changes to this policy</h2>
+      <p>When this policy changes, the "Last updated" date at the top of this page changes with it. Material changes — anything that meaningfully affects what is collected or how it is used — will additionally be announced through an in-app notice or an email to affected users before the change takes effect.</p>
+      <p>Previous versions are available on request. Continuing to use a Westmar app after a change takes effect means the revised policy applies to you.</p>
 
+      <h2 id="p-contact">Contact</h2>
+      <p>Privacy questions, deletion requests, and data exports all go to the same place:</p>
+      <address>
+        <span class="legal-address-name">Westmar LLC</span>
+        Attn: Nicholas Mello<br>
+        506 Park Dr.<br>
+        Bradenton, FL 34209<br>
+        United States<br>
+        <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>
+      </address>
+
+    </div>
   </div>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="site-footer shell">
-  <div class="footer-brand">
-    <span class="wordmark" aria-hidden="true"><span class="wordmark-name">Westmar</span> <span class="wordmark-llc">LLC</span></span>
-    <span class="footer-copy">© 2026 Westmar LLC</span>
+<!-- FOOTER (SiteFooter) -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="7.06 17.25 367.69 22.19" aria-hidden="true" focusable="false"><path fill="#C72020" fill-rule="evenodd" d="M7.06 18.31 7.06 18.75 7.25 19.31 7.81 20.12 8.25 21.19 9.81 23.94 10.31 25.12 10.75 25.75 12.38 29.06 12.81 29.69 13.31 30.88 14.94 33.75 16.56 37.06 17.44 38.50 17.75 38.75 18.44 39.00 24.75 39.00 25.38 38.81 25.81 38.50 26.38 37.62 26.88 36.12 27.44 35.06 27.81 33.88 28.50 32.50 28.81 31.44 29.44 30.25 29.88 28.88 30.94 26.50 31.31 26.19 31.56 26.19 32.06 26.56 32.62 27.56 33.00 28.88 33.69 30.19 34.06 31.44 34.69 32.56 35.06 33.88 35.75 35.19 36.06 36.31 36.69 37.44 37.06 38.44 37.38 38.81 37.81 39.00 44.50 39.00 45.12 38.75 45.75 38.12 47.38 34.81 47.75 34.31 48.25 33.12 48.69 32.50 49.25 31.19 50.88 28.31 55.81 18.75 55.75 18.06 55.25 17.69 47.56 17.69 46.56 18.06 46.19 18.56 45.94 19.38 45.25 20.62 44.88 21.88 44.19 23.12 43.88 24.19 43.25 25.31 42.81 26.69 42.19 27.81 41.81 29.06 41.50 29.62 41.00 30.12 40.50 30.25 40.12 29.94 39.69 28.69 39.00 27.50 38.81 26.81 38.00 25.31 37.75 24.50 36.94 23.00 36.69 22.19 36.00 21.00 35.69 20.00 34.56 18.06 34.19 17.81 33.69 17.69 29.69 17.62 28.94 17.81 28.50 18.06 28.00 18.62 23.62 28.00 23.06 29.44 22.56 30.00 21.94 30.12 21.69 30.00 21.31 29.50 21.00 28.50 20.50 27.56 19.94 26.00 19.50 25.25 18.94 23.69 18.38 22.69 16.94 19.06 16.19 18.06 15.25 17.62 7.62 17.69 7.19 18.00ZM59.50 18.19 59.25 18.88 59.25 37.94 59.69 38.75 60.69 39.06 85.94 39.06 86.38 39.00 86.81 38.69 87.06 38.06 87.06 34.75 86.81 34.06 86.31 33.69 69.88 33.69 69.44 33.50 69.12 33.19 68.88 32.50 68.88 31.50 69.00 31.06 69.50 30.44 69.88 30.31 82.38 30.31 82.94 29.88 83.12 29.44 83.12 27.44 82.94 26.75 82.38 26.25 69.88 26.25 69.44 26.06 69.00 25.50 68.88 25.06 68.88 24.00 69.19 23.31 69.88 22.94 85.06 22.88 85.62 22.50 85.88 21.88 85.88 18.88 85.50 18.00 84.88 17.69 84.31 17.62 60.50 17.62 59.81 17.88ZM91.38 21.38 90.31 23.06 89.81 24.88 89.81 25.62 90.06 26.62 90.50 27.50 91.12 28.19 92.00 28.88 93.81 29.69 95.56 30.19 101.88 30.94 106.06 31.19 106.81 31.44 107.12 31.81 107.12 32.31 106.62 33.00 105.44 33.50 104.50 33.69 103.19 33.69 101.81 33.38 101.12 33.06 100.38 32.50 99.44 32.19 91.12 32.19 90.56 32.38 90.25 32.81 90.25 33.44 90.62 34.25 91.50 35.50 92.69 36.69 94.12 37.62 97.44 38.88 100.94 39.31 105.94 39.38 109.06 39.06 110.88 38.69 113.31 37.75 115.00 36.62 115.81 35.81 116.75 34.56 117.75 32.31 117.88 31.56 117.81 30.69 117.56 29.94 116.94 28.94 116.31 28.25 115.56 27.69 113.44 26.75 109.12 25.88 101.62 25.38 101.00 25.06 100.69 24.56 100.75 24.12 101.19 23.56 101.88 23.19 103.00 22.94 105.25 23.06 107.50 24.12 108.62 24.38 116.06 24.50 117.00 24.25 117.25 23.88 117.25 23.19 116.75 22.06 115.38 20.38 113.50 19.06 111.69 18.25 108.94 17.56 107.69 17.38 105.94 17.25 101.62 17.25 99.94 17.38 98.12 17.69 95.44 18.44 93.19 19.62ZM120.44 17.88 120.19 18.25 120.06 18.75 120.00 21.00 120.06 22.06 120.44 22.75 120.88 22.94 128.19 22.94 128.62 23.12 129.12 23.75 129.12 37.75 129.38 38.50 129.69 38.81 130.19 39.00 137.81 39.00 138.50 38.69 138.88 37.88 138.81 24.12 139.00 23.50 139.38 23.12 139.81 22.94 147.19 22.94 147.62 22.69 147.94 21.94 147.88 18.50 147.69 18.06 147.38 17.75 147.00 17.62 121.25 17.62ZM151.62 18.44 151.50 18.88 151.50 38.00 151.75 38.56 152.31 38.94 160.19 39.06 160.88 38.69 161.12 38.00 161.06 27.44 161.25 26.81 161.56 26.56 161.81 26.62 162.81 27.75 164.31 30.31 169.38 38.12 169.75 38.56 170.38 38.94 176.31 39.00 177.31 38.62 179.69 35.12 184.19 27.88 185.31 26.44 185.56 26.44 185.75 26.62 185.94 27.12 185.94 38.12 186.12 38.62 186.44 38.94 186.94 39.06 194.06 39.06 194.88 38.88 195.44 38.25 195.56 37.50 195.50 18.81 195.25 18.19 194.75 17.75 194.31 17.62 184.75 17.62 184.19 17.88 183.19 18.88 174.50 31.62 173.75 32.19 173.19 32.12 172.62 31.62 163.94 19.00 162.75 17.81 162.25 17.62 152.94 17.62 152.06 17.88ZM199.19 38.00 199.25 38.62 199.94 39.00 207.62 39.00 208.44 38.62 208.94 38.06 210.00 36.38 210.56 35.81 211.38 35.44 224.38 35.44 225.44 36.00 227.06 38.44 227.44 38.81 227.94 39.00 235.31 39.06 236.25 38.81 236.50 38.38 236.44 37.94 235.94 37.06 234.38 35.06 223.75 19.62 222.38 17.94 221.50 17.69 214.19 17.69 213.31 18.00 212.12 19.44 201.00 35.44 199.50 37.38ZM214.50 29.19 214.94 28.31 215.69 27.31 217.06 25.00 217.50 24.56 218.00 24.44 218.38 24.56 218.81 25.06 220.12 27.38 220.94 28.50 221.31 29.56 221.06 30.00 220.31 30.25 215.31 30.25 214.62 29.88ZM240.12 18.31 239.94 18.75 239.88 19.38 239.88 37.81 240.06 38.38 240.50 38.81 241.12 39.00 248.69 39.00 249.25 38.81 249.50 38.56 249.75 37.81 249.75 33.69 250.06 33.06 250.56 32.75 256.38 32.81 258.19 33.06 259.19 33.44 260.75 34.94 262.12 38.44 262.62 38.88 264.38 39.00 271.25 39.06 271.75 38.88 272.12 38.38 272.12 37.44 271.06 33.94 270.44 33.00 269.06 31.81 268.94 31.31 269.06 31.00 269.50 30.56 270.25 30.12 271.00 29.44 271.75 28.44 272.06 27.81 272.44 25.81 272.38 24.25 272.06 22.75 271.81 22.19 270.94 21.00 269.56 19.88 268.44 19.25 265.62 18.38 264.00 18.12 261.88 18.06 258.94 17.75 241.44 17.62 240.44 17.94ZM249.69 24.19 249.88 23.44 250.19 23.06 250.56 22.88 258.25 23.00 259.94 23.31 261.12 23.94 261.69 24.56 261.81 25.50 261.62 26.00 261.06 26.56 260.31 27.00 259.19 27.31 257.44 27.50 250.50 27.56 250.00 27.19 249.69 26.44Z"/><path fill="currentColor" fill-rule="evenodd" d="M284.94 18.12 284.69 19.00 284.69 37.75 284.81 38.38 285.19 38.88 285.75 39.06 310.56 39.00 310.94 38.88 311.38 38.50 311.62 37.81 311.62 35.12 311.31 34.19 310.69 33.75 295.50 33.75 294.88 33.50 294.44 33.00 294.25 32.19 294.31 18.88 294.12 18.31 293.69 17.88 293.12 17.69 285.75 17.62 285.31 17.75ZM315.19 18.31 315.00 18.81 314.94 19.69 314.94 37.62 315.06 38.19 315.50 38.75 316.19 39.00 341.06 39.00 341.44 38.88 341.81 38.50 342.00 37.81 342.00 35.12 341.75 34.19 341.19 33.75 325.69 33.81 325.25 33.62 324.88 33.12 324.69 32.19 324.75 18.88 324.56 18.25 324.31 17.94 323.62 17.69 316.25 17.69 315.56 17.94ZM343.44 24.94 343.19 25.81 343.00 27.94 343.12 30.44 343.44 31.75 344.38 33.69 345.50 35.12 347.38 36.75 349.62 37.94 352.44 38.81 356.44 39.31 360.69 39.38 364.88 39.00 366.19 38.75 369.19 37.75 370.81 36.88 372.56 35.50 373.62 34.25 374.69 32.25 374.56 31.56 374.12 31.25 365.81 31.19 364.75 31.56 363.31 32.75 362.50 33.19 360.75 33.62 358.56 33.75 356.75 33.44 355.50 33.00 354.25 32.06 353.25 30.75 352.75 29.50 352.62 28.81 352.75 27.19 353.19 26.06 353.81 25.06 354.62 24.25 355.88 23.50 356.94 23.12 358.12 22.94 360.12 22.94 361.44 23.12 363.25 23.88 364.75 25.06 365.75 25.44 374.06 25.38 374.56 25.00 374.62 24.25 374.00 23.00 373.06 21.75 372.00 20.69 370.06 19.38 367.31 18.25 364.12 17.56 362.69 17.38 357.69 17.25 354.69 17.50 350.88 18.31 348.19 19.44 346.25 20.81 344.62 22.62Z"/></svg>
+    <nav class="footer-grid" aria-label="Footer">
+      <div class="footer-col">
+        <h2 class="footer-heading">Apps</h2>
+        <a href="index.html#steerjobs">SteerJobs</a>
+        <a href="index.html#shiftjar">ShiftJar</a>
+        <a href="index.html#yourbpm">YourBPM</a>
+        <a href="index.html#voyager">Voyager</a>
+        <a href="index.html#paverlab">PaverLab</a>
+        <a href="index.html#buildifyos">BuildifyOS</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Websites</h2>
+        <a href="websites.html#pricing">Pricing</a>
+        <a href="websites.html#work">Recent work</a>
+        <a href="websites.html#care">What $99 covers</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Company</h2>
+        <a href="support.html">Support</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Contact</h2>
+        <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>
+        <a href="mailto:hello@westmardev.com?subject=Website">Get a website quote</a>
+      </div>
+    </nav>
+    <div class="footer-bottom"><span>© 2026 Westmar LLC. A Mello family company.</span><span>Bradenton, Florida</span></div>
   </div>
-  <nav class="footer-nav" aria-label="Footer">
-    <a href="websites.html">Websites</a>
-    <a href="privacy.html" aria-current="page">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="support.html">Support</a>
-    <a href="mailto:hello@westmardev.com">Contact</a>
-  </nav>
 </footer>
 
 <script src="app.js" defer></script>
