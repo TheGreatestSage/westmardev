@@ -45,7 +45,7 @@
 
   <!-- PAGE HEAD -->
   <header class="legal-head">
-    <div class="eyebrow">LAST UPDATED: 27 SEPTEMBER 2026</div>
+    <div class="eyebrow">LAST UPDATED: 10 OCTOBER 2026</div>
     <h1>Privacy Policy</h1>
     <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: each app collects only what it needs to work, no app contains an analytics or advertising SDK, and none of your data is ever sold.</p>
   </header>
@@ -72,7 +72,7 @@
     <div class="legal">
 
       <h2 id="p-who">Who we are</h2>
-      <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, YourBPM, ShiftJar, and PaverLab.</p>
+      <p>Westmar LLC is a Florida limited liability company operated by Nicholas Mello, its sole owner and developer. Westmar builds and publishes native iOS applications, currently SteerJobs, Voyager: Cosmic Odometer, YourBPM, ShiftJar, PaverLab, and Davy Jones: The Abyss.</p>
       <p>For anything in this policy — questions, requests, or complaints — email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>. Messages go directly to the person who wrote the code.</p>
 
       <h2 id="p-collects">What each app collects</h2>
@@ -122,12 +122,24 @@
       <p><strong>How long it is kept:</strong> as long as the app is installed. Deleting the app removes it.</p>
       <p>Because Westmar holds no PaverLab data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
 
+      <h3 id="p-davyjones">Davy Jones: The Abyss</h3>
+      <p>Davy Jones: The Abyss is an open-world pirate game. It is bought once, through the App Store, with no ads and no in-app purchases. It has no account system, no login, and no Westmar server behind it.</p>
+      <ul>
+        <li><strong>Saved games</strong> — your voyage and your game settings. Stored on your device.</li>
+      </ul>
+      <p><strong>Westmar collects no data from Davy Jones: The Abyss.</strong> The game has no analytics, no advertising, no tracking, and no third-party SDKs, and it sends nothing to Westmar.</p>
+      <p>If you are signed into iCloud, your saved voyage is also kept in iCloud, so it follows you to your other devices and comes back if you reinstall. Apple stores it in your Apple Account under Apple's privacy policy; Westmar cannot see or retrieve it.</p>
+      <p>If you are signed into Game Center, the game reports your achievements and leaderboard scores to it. Game Center is Apple's service, and Apple's privacy policy governs it. The game has no chat and no other way to contact other players.</p>
+      <p>Apple processes the purchase. Westmar never sees your payment details.</p>
+      <p><strong>How long it is kept:</strong> as long as you keep it. Deleting the app removes the saves on your device. Starting a new game erases your saved voyage, including the copy in iCloud.</p>
+      <p>Because Westmar holds no Davy Jones: The Abyss data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+
       <h2 id="p-noads">No analytics. No ads. No tracking.</h2>
       <p>This is worth stating flatly rather than burying in a list: <strong>no Westmar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No Westmar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
       <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
 
       <h2 id="p-isolated">Each app's data stays isolated</h2>
-      <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar and PaverLab have no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
+      <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar, PaverLab, and Davy Jones: The Abyss have no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
       <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
 
       <h2 id="p-never">What is never done with your data</h2>
@@ -145,6 +157,8 @@
         <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes app purchases and in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell Westmar who individual users are. Apple's own privacy policy governs that data.</li>
         <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs and ShiftJar. If you join a beta, Apple shares your email address with Westmar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
         <li><strong>Apple iCloud (CloudKit)</strong> — syncs ShiftJar data between your devices through your Apple ID's private database. Apple hosts it under your account; Westmar has no access to its contents.</li>
+        <li><strong>Apple iCloud (key-value storage)</strong> — keeps your Davy Jones: The Abyss saved voyage in your Apple Account so it follows you between devices. Apple hosts it under your account; Westmar has no access to its contents.</li>
+        <li><strong>Apple Game Center</strong> — receives Davy Jones: The Abyss achievements and leaderboard scores when you are signed into Game Center. Apple runs it under Apple's own privacy policy.</li>
         <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on Westmar's instructions.</li>
         <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; Westmar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
         <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
@@ -159,7 +173,7 @@
       </ul>
       <p>Email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
       <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, Westmar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
-      <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone. The same goes for PaverLab: its only record is your lesson progress, which sits on your device and nowhere else, and deleting the app is the deletion.</p>
+      <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone. The same goes for PaverLab: its only record is your lesson progress, which sits on your device and nowhere else, and deleting the app is the deletion. Davy Jones: The Abyss works the same way: its saves sit on your device and in your iCloud, and starting a new game erases them.</p>
 
       <h2 id="p-ccpa">California privacy rights (CCPA/CPRA)</h2>
       <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>.</p>
@@ -168,14 +182,14 @@
 
       <h2 id="p-gdpr">UK and European privacy rights (GDPR)</h2>
       <p>If you are in the United Kingdom or the European Economic Area, Westmar LLC is the data controller for the data described in this policy.</p>
-      <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, and PaverLab's lesson progress stays on your device; Westmar never receives either, so there is no Westmar processing to base.</p>
+      <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, PaverLab's lesson progress stays on your device, and Davy Jones: The Abyss saves stay on your device and in your iCloud; Westmar never receives any of them, so there is no Westmar processing to base.</p>
       <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and are answered within 30 days.</p>
       <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of Westmar's agreement with Supabase.</p>
       <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with Westmar first is welcome but not required.</p>
       <p><strong>EU representative.</strong> Westmar has not appointed an Article 27 representative in the EU or UK. Westmar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
 
       <h2 id="p-children">Children's privacy</h2>
-      <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact.</p>
+      <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact. Davy Jones: The Abyss is a game rated 13+ on the App Store, with no accounts, no chat, no user-to-user contact, and no user-generated content.</p>
       <p>Westmar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and it will be deleted promptly.</p>
 
       <h2 id="p-security">Security</h2>
@@ -184,6 +198,7 @@
         <li>All data in transit is encrypted with TLS.</li>
         <li>Data at rest in Supabase is encrypted using Supabase's platform encryption.</li>
         <li>ShiftJar data in iCloud is encrypted in transit and at rest under Apple's CloudKit security model, inside your personal Apple ID account.</li>
+        <li>Davy Jones: The Abyss saves in iCloud sit inside your personal Apple Account, under Apple's iCloud security model.</li>
         <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
         <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
       </ul>
@@ -223,6 +238,7 @@
         <a href="index.html#voyager">Voyager</a>
         <a href="index.html#paverlab">PaverLab</a>
         <a href="index.html#buildifyos">BuildifyOS</a>
+        <a href="davyjones">Davy Jones</a>
       </div>
       <div class="footer-col">
         <h2 class="footer-heading">Websites</h2>

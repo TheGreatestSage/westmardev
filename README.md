@@ -12,9 +12,13 @@ Support, Privacy, Terms, plus the shared SiteNav and SiteFooter).
 | `websites.html` | Websites for contractors — pricing, recent work, what $99 covers |
 | `support.html` | Support — what to include, common questions |
 | `privacy.html`, `terms.html` | Legal pages with an "On this page" list on wide screens |
+| `davyjones/index.html` | Davy Jones: The Abyss — hero, features, screenshot slots (`/davyjones`) |
+| `davyjones/support/index.html` | Its support page, the App Store Support URL (`/davyjones/support`) |
+| `davyjones/privacy/index.html` | Redirects to its section of the Privacy Policy (`/davyjones/privacy`) |
 | `styles.css` | Design tokens and all styling, shared by every page |
 | `app.js` | Mobile menu, FAQ accordion, Home's live numbers |
 | `img/westmar-logo.svg` | The logo; inlined in every page's header and footer |
+| `img/app-store-badge.svg` | Apple's "Download on the App Store" badge, unmodified |
 | `favicon.svg`, `apple-touch-icon.png` | The logo's own W on white |
 
 No build step, no dependencies. Geist (400–700) loads from Google Fonts; the
@@ -45,8 +49,9 @@ so layouts follow the boards at every width.
 ## Shared header and footer
 
 The header (SiteNav) and footer (SiteFooter) are the same markup on every page,
-logo included. When you change one, change all five pages. Only Home adds the
-footer's status note.
+logo included. When you change one, change all seven pages (the two under
+`davyjones/` use root paths, `/index.html` rather than `index.html`). Only Home
+adds the footer's status note.
 
 In the inline logo, the WESTMAR path is `#C72020` and the LLC path is
 `fill="currentColor"`, coloured `#121212` by the surrounding CSS.
@@ -70,3 +75,10 @@ edits to the text never need matching edits elsewhere.
 
 Any static host works. For GitHub Pages: **Settings → Pages → Deploy from
 branch → `main` / root**.
+
+## App pages
+
+Pages under `davyjones/` sit in folders so the URLs stay clean (`/davyjones/support`)
+with no host config. That's also why they use root paths for every asset and link.
+The App Store badge is an `<a>` with no `href` until the listing is live; the
+comment above it says what to change, and the Home tile's badge changes with it.

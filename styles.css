@@ -958,6 +958,49 @@ html.menu-open { overflow: hidden; }
   font-variant-numeric: tabular-nums;
 }
 
+/* Davy Jones sounding line — stops get further apart the deeper they go. */
+.sounding {
+  padding-top: 36px;
+  gap: 18px;
+}
+
+.sounding-line {
+  margin: 0;
+  padding: 14px 0 0;
+  list-style: none;
+  border-left: 1px solid var(--on-dark-muted);
+  text-align: left;
+}
+
+.sounding-line li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--on-dark-2);
+}
+
+.sounding-line li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--on-dark-muted);
+}
+
+.sounding-line li:nth-child(2) { margin-top: 28px; }
+.sounding-line li:nth-child(3) { margin-top: 64px; }
+
+.sounding-line .sounding-deep {
+  font-weight: 600;
+  color: var(--on-dark);
+}
+
+.sounding-line .sounding-deep::before { background: var(--red-on-dark); }
+
 /* ==========================================================================
    Home — why, websites promo
    ========================================================================== */
@@ -1448,6 +1491,84 @@ html.menu-open { overflow: hidden; }
 }
 
 /* ==========================================================================
+   App pages (davyjones/) — hero tile, features, screenshots
+   Under a folder, so these pages link with root paths (/styles.css).
+   ========================================================================== */
+
+.app-page {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-page-lede {
+  margin: 0;
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--on-dark-2);
+  text-wrap: pretty;
+}
+
+/* App Store badge. Until the listing is live it is an <a> without an href,
+   which HTML treats as a placeholder link: shown, but not clickable. */
+.store {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-badge { display: inline-flex; }
+
+.store-badge img {
+  display: block;
+  width: auto;
+  height: 48px;
+}
+
+.store-note {
+  font-size: 14px;
+  color: var(--on-dark-muted);
+}
+
+.shots-section { padding: clamp(64px, 8vw, 96px) 0 0; }
+
+.shots {
+  margin-top: clamp(28px, 4vw, 44px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+  gap: 12px;
+}
+
+/* Screenshots are 2868 × 1320 (landscape iPhone). */
+.shot {
+  margin: 0;
+  aspect-ratio: 2868 / 1320;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shot-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tile);
+  border: 1px dashed var(--dash);
+  font-size: 14px;
+  color: var(--muted-2);
+}
+
+/* ==========================================================================
    Legal pages (privacy.html, terms.html)
    ========================================================================== */
 
@@ -1558,6 +1679,7 @@ html.menu-open { overflow: hidden; }
 }
 
 .legal h3 {
+  scroll-margin-top: 72px;
   margin: 40px 0 8px;
   font-size: 20px;
   line-height: 1.3;
