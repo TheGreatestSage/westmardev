@@ -645,6 +645,9 @@ html.menu-open { overflow: hidden; }
   gap: 12px;
 }
 
+/* A small tile that takes the grid's whole last row. */
+.app-tile-full { grid-column: 1 / -1; }
+
 /* Illustrations sit at the bottom of the small tiles. */
 .app-visual {
   margin-top: auto;
@@ -1502,11 +1505,12 @@ html.menu-open { overflow: hidden; }
   gap: 12px;
 }
 
+/* Sized like .hero-lede, the intro on every other page. */
 .app-page-lede {
   margin: 0;
   max-width: 620px;
-  font-size: 19px;
-  line-height: 1.5;
+  font-size: clamp(19px, 2.2vw, 24px);
+  line-height: 1.38;
   color: var(--on-dark-2);
   text-wrap: pretty;
 }
