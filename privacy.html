@@ -47,7 +47,7 @@
   <header class="legal-head">
     <div class="eyebrow">LAST UPDATED: 10 OCTOBER 2026</div>
     <h1>Privacy Policy</h1>
-    <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: each app collects only what it needs to work, no app contains an analytics or advertising SDK, and none of your data is ever sold.</p>
+    <p class="legal-lede">This policy covers every app published by Westmar LLC. The short version: Westmar collects only what each app needs to work, and what you put into an app is never sold. One app, ShiftJar, is free and shows banner ads through Google AdMob, whose SDK collects its own data to do that; what that involves is spelled out below. No other app contains an advertising SDK.</p>
   </header>
 
   <div class="legal-layout">
@@ -55,7 +55,7 @@
       <span class="legal-toc-title">On this page</span>
       <a href="#p-who">Who we are</a>
       <a href="#p-collects">What each app collects</a>
-      <a href="#p-noads">No analytics. No ads. No tracking.</a>
+      <a href="#p-ads">Analytics, ads, and tracking</a>
       <a href="#p-isolated">Each app's data stays isolated</a>
       <a href="#p-never">What is never done with your data</a>
       <a href="#p-third">Third-party services</a>
@@ -102,14 +102,26 @@
       <p>YourBPM has not been released. There is no public build, no server, and no user data. When it ships, this section will describe exactly what it reads — including any Apple Health access — and that description will be published here before the app is available to anyone.</p>
 
       <h3>ShiftJar</h3>
-      <p>ShiftJar is a tip tracker for restaurant servers and bartenders. It has no account system, no login, and no Westmar server behind it.</p>
+      <p>ShiftJar is a tip tracker for restaurant servers and bartenders. It is free, and a banner ad pays for it. It has no account system, no login, and no Westmar server behind it.</p>
       <ul>
-        <li><strong>Shift records</strong> — tips, hours, tip-outs, job name, and any notes you add. Entered by you, stored on your device.</li>
+        <li><strong>Shift records</strong> — the date, tips and any cash or credit split, hours, tip-outs, hourly wage, section, job and role names, and any notes you add. Entered by you, stored on your device.</li>
       </ul>
       <p>If you are signed into iCloud, shift records sync through Apple's CloudKit to your private iCloud database — the part of iCloud only your Apple ID can reach. Westmar cannot see, query, or retrieve it; Apple's infrastructure moves it between your own devices. With iCloud off, ShiftJar stores everything locally and works fully offline.</p>
       <p>CSV export is user-initiated: the file is generated on your device and goes only where you choose to send it.</p>
       <p><strong>How long it is kept:</strong> as long as you keep it. Data lives on your device and in your iCloud, not with Westmar. Deleting the app removes its local data; iCloud copies can be removed from iOS Settings or within the app.</p>
-      <p>Because Westmar holds no ShiftJar data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+      <p>Because Westmar holds none of your shift records, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
+      <p><strong>Advertising.</strong> ShiftJar shows one banner ad at the top of the Dashboard and History screens, and nowhere else. The ads come from Google AdMob through Google's Mobile Ads SDK, which is built into the app. According to Google's published disclosure, to choose, show, and measure those ads its SDK may collect the following from your device and send it to Google:</p>
+      <ul>
+        <li><strong>Device identifiers</strong> — your device's advertising identifier, if you allow tracking (see below), or other identifiers limited to this app or developer.</li>
+        <li><strong>IP address and approximate location</strong> — your IP address, which Google may use to estimate a general area. ShiftJar never asks for location permission and never reads GPS.</li>
+        <li><strong>Advertising data</strong> — such as which ads you have been shown.</li>
+        <li><strong>Product interaction</strong> — such as app launches and taps.</li>
+        <li><strong>Diagnostics</strong> — crash logs, performance data such as launch time, hang rate, and energy use, and other diagnostic data.</li>
+      </ul>
+      <p>Google uses this data for advertising, analytics, and diagnosing its SDK, under its own privacy policy and not on Westmar's instructions. The ads themselves can come from other advertising companies that buy through Google, and Google says it may use the device identifier for third-party advertising and analytics and may share performance data with other companies that display ads. <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> explains what Google does with it, and <a href="https://adssettings.google.com/">Google's Ad Settings</a> covers ad personalisation tied to a Google account or browser. Westmar holds none of this data. Westmar's AdMob account reports totals, such as how many ads were shown and what they earned; it does not tell Westmar who you are.</p>
+      <p><strong>Your shift records are not part of this.</strong> ShiftJar does not send your tips, hours, wages, job names, or notes to Google, and does not pass them to the ad SDK.</p>
+      <p><strong>Tracking permission.</strong> The first time you open ShiftJar, iOS asks whether to let the app track your activity across other companies' apps and websites. If you allow it, Google can use your device's advertising identifier to show you personalised ads and to measure them across apps. If you choose "Ask App Not to Track", iOS withholds that identifier and you still see ads, without it. ShiftJar works exactly the same either way, and you can change your answer at any time in iOS Settings → Privacy &amp; Security → Tracking. If tracking requests are switched off or restricted on your device, iOS does not ask and treats that as a no. Your answer decides only whether Google receives the advertising identifier; the other collection listed above happens whenever ads load.</p>
+      <p><strong>Where it is offered.</strong> ShiftJar's App Store release is for the United States only.</p>
 
       <h3>PaverLab</h3>
       <p>PaverLab is a paver-installation training app — guided lessons, labs that grade a design against spec, and a freeform pattern sandbox. It is bought once, through the App Store. It has no account system, no login, and no Westmar server behind it.</p>
@@ -134,31 +146,33 @@
       <p><strong>How long it is kept:</strong> as long as you keep it. Deleting the app removes the saves on your device. Starting a new game erases your saved voyage, including the copy in iCloud.</p>
       <p>Because Westmar holds no Davy Jones: The Abyss data, there is nothing for Westmar to delete, correct, or export on your behalf — you already hold the only copy.</p>
 
-      <h2 id="p-noads">No analytics. No ads. No tracking.</h2>
-      <p>This is worth stating flatly rather than burying in a list: <strong>no Westmar app contains an analytics SDK</strong>. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. No Westmar app contains an advertising SDK or an ad network of any kind. No app asks for App Tracking Transparency permission, because none of them track you.</p>
-      <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer. There is no attribution SDK, no session recording, and no behavioural profiling.</p>
+      <h2 id="p-ads">Analytics, ads, and tracking</h2>
+      <p>This is worth stating flatly rather than burying in a list: <strong>one Westmar app shows ads, and that app is ShiftJar</strong>. It contains Google's Mobile Ads SDK and asks for App Tracking Transparency permission, as its section above describes. No other Westmar app contains an advertising SDK or an ad network of any kind, and no other app asks for tracking permission.</p>
+      <p>No Westmar app contains a separate analytics SDK. No TelemetryDeck, no PostHog, no Firebase, no Amplitude, no Mixpanel, no Segment. In ShiftJar, Google's ad SDK collects the usage and diagnostic data listed above for Google's own advertising and analytics; Westmar sees none of it beyond the ad totals its AdMob account reports.</p>
+      <p>There is no crash-reporting service beyond the anonymised crash reports Apple collects and shares with every developer and, in ShiftJar, the crash logs Google's ad SDK collects for itself. Apart from Google's ad SDK in ShiftJar, which measures and personalises ads as described above, no Westmar app contains an attribution SDK, session recording, or behavioural profiling.</p>
 
       <h2 id="p-isolated">Each app's data stays isolated</h2>
-      <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar, PaverLab, and Davy Jones: The Abyss have no server-side footprint at all. Nothing collected in one app is used to build a picture of you across the others.</p>
+      <p>Westmar apps do not talk to each other. There is no shared login, no shared profile, and no combined dataset across apps. SteerJobs and YourBPM run on entirely separate Supabase organisations and projects — not just separate tables, separate infrastructure. ShiftJar, PaverLab, and Davy Jones: The Abyss have no Westmar server behind them at all. Westmar uses nothing collected in one app to build a picture of you across the others.</p>
       <p>Deleting an app removes its on-device data. Data held on a server, where an app uses one, is removed on request as described below.</p>
 
       <h2 id="p-never">What is never done with your data</h2>
       <ul>
-        <li>Your data is <strong>never sold</strong>, to anyone, for any price.</li>
-        <li>Your data is <strong>never shared with advertisers</strong>, ad networks, or data brokers.</li>
-        <li>Your data is <strong>never used to train machine learning models</strong>.</li>
+        <li>What you put into a Westmar app, and what Westmar holds about you — shift and tip records, job site photos, documents, hours, check-in locations, your sign-in email, lesson progress, saved games — is <strong>never sold</strong>, to anyone, for any price.</li>
+        <li>It is <strong>never shared with advertisers</strong>, ad networks, or data brokers. The only data that reaches Google or its advertising partners from any Westmar app is the device, ad, and diagnostic data Google's SDK collects in ShiftJar, described in the ShiftJar section above.</li>
+        <li>Westmar <strong>never uses your data to train machine learning models</strong>.</li>
         <li>Your job site photos are never used for marketing, case studies, or App Store screenshots without your written permission.</li>
       </ul>
-      <p>These are not aspirations subject to a future policy update — they are the operating rules across every Westmar app.</p>
+      <p>These are the operating rules across every Westmar app.</p>
 
       <h2 id="p-third">Third-party services</h2>
-      <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job.</p>
+      <p>A small number of outside services are involved in running and distributing the apps. Each one receives only what it needs to do its job, except Google AdMob, whose SDK decides what it collects (listed in the ShiftJar section).</p>
       <ul>
         <li><strong>Apple</strong> — distributes the apps through the App Store and TestFlight and processes app purchases and in-app purchases. Apple provides aggregate, anonymised download and crash statistics; it does not tell Westmar who individual users are. Apple's own privacy policy governs that data.</li>
         <li><strong>TestFlight</strong> — used for beta distribution, currently for SteerJobs and ShiftJar. If you join a beta, Apple shares your email address with Westmar so the build can reach you, along with crash logs and any feedback you choose to submit.</li>
         <li><strong>Apple iCloud (CloudKit)</strong> — syncs ShiftJar data between your devices through your Apple ID's private database. Apple hosts it under your account; Westmar has no access to its contents.</li>
         <li><strong>Apple iCloud (key-value storage)</strong> — keeps your Davy Jones: The Abyss saved voyage in your Apple Account so it follows you between devices. Apple hosts it under your account; Westmar has no access to its contents.</li>
         <li><strong>Apple Game Center</strong> — receives Davy Jones: The Abyss achievements and leaderboard scores when you are signed into Game Center. Apple runs it under Apple's own privacy policy.</li>
+        <li><strong>Google AdMob</strong> — serves the banner ads in ShiftJar. Google's Mobile Ads SDK collects the device, ad, and diagnostic data described in the ShiftJar section and sends it to Google, which handles it under its own privacy policy rather than on Westmar's instructions. No other Westmar app uses it.</li>
         <li><strong>Supabase</strong> — hosts the SteerJobs database and file storage in the United States (us-east-1). Supabase stores the data described in the SteerJobs section above and is contractually a data processor acting on Westmar's instructions.</li>
         <li><strong>Stripe</strong> — processes SteerJobs subscription billing on the web. Stripe receives the billing contact and payment details of the person who subscribes on behalf of a company; Westmar receives a subscription status, never a card number. Crew members who simply use the app never touch Stripe.</li>
         <li><strong>Apple Push Notification service</strong> — delivers SteerJobs job assignment and to-do notifications. Push goes through Apple's APNs directly, with no third-party push vendor in between.</li>
@@ -174,22 +188,23 @@
       <p>Email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> with the app name in the subject line. Requests are acknowledged within 5 business days and completed within 30 days. There is no charge, and you will not be asked to create an account or fill in a form to make a request.</p>
       <p>One practical note for SteerJobs: because it is a company tool, some records — approved phase photos, logged hours on a closed job — belong to your employer's account rather than to you personally. If deleting them outright would gut your company's job history, Westmar will tell you plainly, remove what is genuinely yours, and put you in touch with your company admin for the rest.</p>
       <p>For ShiftJar, these rights are self-serve by design: your records sit on your device and in your private iCloud, so deletion, export, and correction happen in the app itself, instantly, without asking anyone. The same goes for PaverLab: its only record is your lesson progress, which sits on your device and nowhere else, and deleting the app is the deletion. Davy Jones: The Abyss works the same way: its saves sit on your device and in your iCloud, and starting a new game erases them.</p>
+      <p>One exception to self-serve: the ad data Google collects through ShiftJar is held by Google, not Westmar. The iOS tracking setting decides whether Google receives your advertising identifier; it does not stop the other collection listed in the ShiftJar section, which happens whenever ads load. Requests to see or delete that data go to Google under <a href="https://policies.google.com/privacy">its privacy policy</a>.</p>
 
       <h2 id="p-ccpa">California privacy rights (CCPA/CPRA)</h2>
       <p>If you live in California, you have the right to know what personal information is collected about you, to request its deletion, to request correction, and to receive a copy in a portable format. Exercise any of them at <a href="mailto:hello@westmardev.com">hello@westmardev.com</a>.</p>
-      <p>The categories collected are listed app-by-app above: identifiers (email address), geolocation (SteerJobs check-in coordinates, Voyager's coarse latitude, which never leaves the device), visual information (job site photos and uploaded documents), professional information (hours and job records), and financial information (ShiftJar shift and tip records, which stay on your device and in your private iCloud and never reach Westmar's systems). They are collected to operate the apps, and for no other purpose.</p>
-      <p><strong>Westmar does not sell personal information and does not share it for cross-context behavioural advertising.</strong> That has never happened and there is no mechanism in any app that could make it happen — there is no advertising SDK to send it to. Because nothing is sold or shared in that sense, there is no "Do Not Sell or Share My Personal Information" link to offer. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
+      <p>The categories collected are listed app-by-app above: identifiers (email address; in ShiftJar, your IP address and the device identifiers Google's ad SDK collects), geolocation (SteerJobs check-in coordinates; Voyager's coarse latitude, which never leaves the device; in ShiftJar, the general area Google estimates from your IP address), internet or other network activity (in ShiftJar, the ads you are shown and how you interact with them, collected by Google's ad SDK), visual information (job site photos and uploaded documents), professional information (hours and job records), and financial information (ShiftJar shift and tip records, which stay on your device and in your private iCloud and never reach Westmar's systems). Westmar collects them only to operate the apps. In ShiftJar, Google collects the ad data described above and uses it for its own advertising, analytics, and SDK diagnostics.</p>
+      <p><strong>Westmar does not sell personal information for money.</strong> ShiftJar's ads are the one place California's broader definitions come into play: if you allow tracking at the iOS prompt, Google can use your device's advertising identifier to show you ads based on your activity in other companies' apps and websites, and California law can treat that as "sharing" personal information for cross-context behavioural advertising, or as a "sale". Turning off tracking for ShiftJar in iOS Settings → Privacy &amp; Security → Tracking, or choosing "Ask App Not to Track" when the app first asks, withholds your advertising identifier, which ends that cross-app use. The other ad data described in the ShiftJar section still goes to Google while ads load. ShiftJar works the same either way. Outside ShiftJar's ads, no Westmar app sells or shares personal information in that sense. You will never be discriminated against for exercising any of these rights; there is no worse tier of service to put you in.</p>
 
       <h2 id="p-gdpr">UK and European privacy rights (GDPR)</h2>
-      <p>If you are in the United Kingdom or the European Economic Area, Westmar LLC is the data controller for the data described in this policy.</p>
-      <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, PaverLab's lesson progress stays on your device, and Davy Jones: The Abyss saves stay on your device and in your iCloud; Westmar never receives any of them, so there is no Westmar processing to base.</p>
+      <p>If you are in the United Kingdom or the European Economic Area, Westmar LLC is the data controller for the data Westmar holds. The ad data collected in ShiftJar is handled by Google, as the ShiftJar section describes.</p>
+      <p><strong>Legal basis.</strong> SteerJobs data — account details, photos, check-in location, hours — is processed to perform the contract between Westmar and your company, and to provide the service you are using. Beta participation and any optional feedback rest on your consent, which you can withdraw at any time by leaving the beta. Voyager's latitude reading rests on your consent, given through the iOS permission prompt and revocable in Settings at any moment; the app is fully functional if you refuse. ShiftJar's records stay on your device and in your private iCloud, PaverLab's lesson progress stays on your device, and Davy Jones: The Abyss saves stay on your device and in your iCloud; Westmar never receives any of them, so there is no Westmar processing to base. ShiftJar's ads are served by Google AdMob; ShiftJar's App Store release is limited to the United States, and it is not intended for use in the UK or EEA.</p>
       <p><strong>Your rights.</strong> Access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. Where processing rests on consent, you can withdraw it without affecting anything done before you did. Requests go to <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and are answered within 30 days.</p>
       <p><strong>Transfers.</strong> SteerJobs data is stored in the United States. Transfers out of the UK/EEA rely on the European Commission's Standard Contractual Clauses, which form part of Westmar's agreement with Supabase.</p>
       <p><strong>Complaints.</strong> You can lodge a complaint with your national data protection authority, or with the UK Information Commissioner's Office. Raising it with Westmar first is welcome but not required.</p>
       <p><strong>EU representative.</strong> Westmar has not appointed an Article 27 representative in the EU or UK. Westmar does not currently target or market its apps to users in those regions. If that changes, a representative will be appointed and named here before it does.</p>
 
       <h2 id="p-children">Children's privacy</h2>
-      <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact. Davy Jones: The Abyss is a game rated 13+ on the App Store, with no accounts, no chat, no user-to-user contact, and no user-generated content.</p>
+      <p>No Westmar app is directed at children. SteerJobs is a tool for construction companies and their employed crew. ShiftJar is a workplace earnings tool for tipped workers; it shows advertising and is not intended for children. Voyager is a general-audience app with no social features, no chat, no user-to-user contact, and no user-generated content. PaverLab is a training app for the hardscape trade, with no social features, no chat, and no user-to-user contact. Davy Jones: The Abyss is a game rated 13+ on the App Store, with no accounts, no chat, no user-to-user contact, and no user-generated content.</p>
       <p>Westmar does not knowingly collect personal information from anyone under 13. No app participates in Apple's Kids Category. If you believe a child has provided personal information through a Westmar app, email <a href="mailto:hello@westmardev.com">hello@westmardev.com</a> and it will be deleted promptly.</p>
 
       <h2 id="p-security">Security</h2>
@@ -202,12 +217,13 @@
         <li>Row-level security policies keyed on company ID isolate each company's data at the database layer, so isolation does not depend on application code getting every query right.</li>
         <li>Exactly one person — Nicholas Mello — has administrative access to the backend.</li>
       </ul>
-      <p>What is deliberately <em>not</em> claimed: Westmar holds no SOC 2 certification, has not commissioned a third-party penetration test, and does not use end-to-end encryption. No system is perfectly secure. The most effective protection here is that very little is collected in the first place.</p>
+      <p>What is deliberately <em>not</em> claimed: Westmar holds no SOC 2 certification, has not commissioned a third-party penetration test, and does not use end-to-end encryption. No system is perfectly secure. The most effective protection here is that Westmar itself collects very little in the first place.</p>
       <p>If a breach affects your data, you will be told by email, and the relevant regulators will be notified within the deadlines the law sets — 72 hours under GDPR, and whatever the applicable US state law requires.</p>
 
       <h2 id="p-changes">Changes to this policy</h2>
       <p>When this policy changes, the "Last updated" date at the top of this page changes with it. Material changes — anything that meaningfully affects what is collected or how it is used — will additionally be announced through an in-app notice or an email to affected users before the change takes effect.</p>
       <p>Previous versions are available on request. Continuing to use a Westmar app after a change takes effect means the revised policy applies to you.</p>
+      <p><strong>10 October 2026.</strong> ShiftJar now shows banner ads from Google AdMob and asks for iOS tracking permission, starting with version 1.0, build 7. Earlier versions of this policy said that no Westmar app contained an advertising SDK or asked for tracking permission, and that no data went to ad networks. That is no longer true for ShiftJar, and the sections above now say so. Nothing has changed for any other app.</p>
 
       <h2 id="p-contact">Contact</h2>
       <p>Privacy questions, deletion requests, and data exports all go to the same place:</p>
