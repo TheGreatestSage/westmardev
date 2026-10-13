@@ -1,4 +1,4 @@
-// The site is light only now; drop the old dark-mode preference if a visitor still has one.
+// The site follows the browser's light/dark preference; drop the old toggle's saved choice if a visitor still has one.
 try { localStorage.removeItem('theme'); } catch (e) {}
 
 // Mobile menu (under 760px) — full-screen panel below the nav bar. While it is open the
