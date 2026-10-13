@@ -1,12 +1,16 @@
 /* ==========================================================================
    Westmar LLC — design tokens
-   Light only. Values are the Claude Design export's, including its clamp()
-   sizes and auto-fit grids, so layouts track the boards at every width.
+   Light by default; the block after :root holds the dark counterpart, used
+   when the browser prefers dark. Values are the Claude Design export's,
+   including its clamp() sizes and auto-fit grids, so layouts track the
+   boards at every width.
    ========================================================================== */
 
 :root {
   --ink: #121212;
+  --on-ink: #ffffff;
   --bg: #ffffff;
+  --card: #ffffff;
   --tile: #f4f4f2;
   --tile-hover: #ececea;
   --text-2: #3d3d39;
@@ -20,6 +24,10 @@
   --red: #C72020;
   --red-hover: #A51A1A;
   --red-on-dark: #E35D5A;
+  /* Red for text, links, icons, thin bars and focus rings. Fills behind white
+     text keep --red. */
+  --red-text: var(--red);
+  --red-text-hover: var(--red-hover);
 
   --dark: #111111;
   --darker: #0c0c0c;
@@ -46,7 +54,51 @@
   --font: 'Geist', system-ui, sans-serif;
   --wordmark-h: 10.28px;   /* logo height: matches the export wordmark's 10.25px of ink */
 
-  --focus: var(--red);
+  --focus: var(--red-text);
+
+  color-scheme: light dark;
+}
+
+/* Dark counterpart, for browsers that prefer dark. Same type, layout and red;
+   warm near-black neutrals. The ShiftJar, Voyager, Davy Jones and Full site
+   tiles are dark by design and stay as they are. Screen only: print stays light. */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ececea;
+    --on-ink: #161614;
+    --bg: #161614;
+    --card: #2b2b29;
+    --tile: #222220;
+    --tile-hover: #272725;
+    --text-2: #cfcfca;
+    --muted: #a9a9a3;
+    --muted-2: #9b9b95;
+    --rule: rgba(255, 255, 255, .12);
+    --rule-soft: rgba(255, 255, 255, .1);
+    --dash: #7a7a74;
+    --callout-text: #dcdcd7;
+
+    --red-text: #EE6C68;
+    --red-text-hover: #F4908C;
+
+    --zone: #3a3a37;
+    --card-rule: rgba(255, 255, 255, .1);
+    --card-rule-soft: rgba(255, 255, 255, .07);
+
+    --nav-bg: rgba(22, 22, 20, .82);
+    --nav-border: rgba(255, 255, 255, .08);
+    --shadow-card: 0 0 0 1px rgba(255, 255, 255, .06);
+    --shadow-card-sm: 0 0 0 1px rgba(255, 255, 255, .06);
+    --shadow-chip: 0 0 0 1px rgba(255, 255, 255, .06);
+  }
+
+  /* A hairline keeps the dark tiles' edges on the dark page. */
+  .app-tile-dark,
+  .app-tile-black,
+  .tier-dark { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); }
+
+  /* The promo stays red in both schemes, so its white button keeps its light hover. */
+  .btn-white:hover { background: #f4f4f2; }
 }
 
 /* ==========================================================================
@@ -71,8 +123,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--red); }
-a:hover { color: var(--red-hover); }
+a { color: var(--red-text); }
+a:hover { color: var(--red-text-hover); }
 
 :focus-visible {
   outline: 2px solid var(--focus);
@@ -103,13 +155,13 @@ a:hover { color: var(--red-hover); }
   padding: 0 18px;
   border-radius: 999px;
   background: var(--ink);
-  color: #ffffff;
+  color: var(--on-ink);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
 }
 
-.skip-link:hover { color: #ffffff; }
+.skip-link:hover { color: var(--on-ink); }
 
 /* Surfaces that flip the focus ring and link colours. */
 .on-dark { --focus: var(--red-on-dark); }
@@ -149,12 +201,12 @@ a:hover { color: var(--red-hover); }
   align-items: center;
   min-height: 44px;
   font-size: 17px;
-  color: var(--red);
+  color: var(--red-text);
   text-decoration: none;
 }
 
 .more:hover {
-  color: var(--red);
+  color: var(--red-text);
   text-decoration: underline;
 }
 
@@ -171,7 +223,7 @@ a:hover { color: var(--red-hover); }
   font-weight: 600;
 }
 
-.badge-solid { background: var(--ink); color: #ffffff; }
+.badge-solid { background: var(--ink); color: var(--on-ink); }
 .badge-solid-light { background: var(--on-dark); color: var(--dark); }
 .badge-outline { border: 1px solid var(--ink); }
 .badge-outline-light { border: 1px solid var(--on-dark); }
@@ -421,7 +473,7 @@ a:hover { color: var(--red-hover); }
   text-decoration: none;
 }
 
-.nav-link:hover { color: var(--red); }
+.nav-link:hover { color: var(--red-text); }
 
 .nav-contact {
   position: relative;
@@ -431,7 +483,7 @@ a:hover { color: var(--red-hover); }
   padding: 0 14px;
   border-radius: 999px;
   background: var(--ink);
-  color: #ffffff;
+  color: var(--on-ink);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
@@ -503,7 +555,7 @@ a:hover { color: var(--red-hover); }
   text-decoration: none;
 }
 
-.nav-panel-link:hover { color: var(--red); }
+.nav-panel-link:hover { color: var(--red-text); }
 
 .nav-panel-contact {
   margin-top: 24px;
@@ -513,7 +565,7 @@ a:hover { color: var(--red-hover); }
   height: 48px;
   border-radius: 999px;
   background: var(--ink);
-  color: #ffffff;
+  color: var(--on-ink);
   font-size: 17px;
   font-weight: 500;
   text-decoration: none;
@@ -552,13 +604,13 @@ html.menu-open { overflow: hidden; }
 }
 
 .ribbon a {
-  color: var(--red);
+  color: var(--red-text);
   text-decoration: none;
   white-space: nowrap;
 }
 
 .ribbon a:hover {
-  color: var(--red);
+  color: var(--red-text);
   text-decoration: underline;
 }
 
@@ -662,7 +714,7 @@ html.menu-open { overflow: hidden; }
   margin-top: 32px;
   width: 100%;
   max-width: 920px;
-  background: #ffffff;
+  background: var(--card);
   border-radius: 22px;
   padding: clamp(20px, 3vw, 32px);
   box-shadow: var(--shadow-card);
@@ -715,7 +767,7 @@ html.menu-open { overflow: hidden; }
   background: var(--ink);
 }
 
-.phase-bar-review { background: var(--red); }
+.phase-bar-review { background: var(--red-text); }
 .phase-bar-locked { background: var(--rule); }
 
 .phase-name {
@@ -728,7 +780,7 @@ html.menu-open { overflow: hidden; }
 .phase-review-note {
   font-size: 13px;
   font-weight: 500;
-  color: var(--red);
+  color: var(--red-text);
 }
 
 /* ShiftJar take-home */
@@ -836,7 +888,7 @@ html.menu-open { overflow: hidden; }
 }
 
 .zone-active span { font-weight: 600; color: var(--ink); }
-.zone-active .zone-bar { background: var(--red); }
+.zone-active .zone-bar { background: var(--red-text); }
 
 .visual-caption {
   font-size: 14px;
@@ -927,7 +979,7 @@ html.menu-open { overflow: hidden; }
   margin-top: auto;
   width: 100%;
   max-width: 440px;
-  background: #ffffff;
+  background: var(--card);
   border-radius: 18px;
   padding: 18px 22px 6px;
   text-align: left;
@@ -1223,8 +1275,8 @@ html.menu-open { overflow: hidden; }
   width: 12px;
   height: 7px;
   margin-top: 6px;
-  border-left: 2px solid var(--red);
-  border-bottom: 2px solid var(--red);
+  border-left: 2px solid var(--red-text);
+  border-bottom: 2px solid var(--red-text);
   transform: rotate(-45deg);
 }
 
@@ -1323,7 +1375,7 @@ html.menu-open { overflow: hidden; }
   height: 44px;
   padding: 0 18px;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--card);
   box-shadow: var(--shadow-chip);
   font-size: 15px;
   color: var(--text-2);
@@ -1333,7 +1385,7 @@ html.menu-open { overflow: hidden; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--red);
+  background: var(--red-text);
 }
 
 .work-arrow {
@@ -1417,7 +1469,7 @@ html.menu-open { overflow: hidden; }
 .kicker {
   font-size: 17px;
   font-weight: 600;
-  color: var(--red);
+  color: var(--red-text);
 }
 
 .hero-title-narrow { max-width: 900px; }
@@ -1454,7 +1506,7 @@ html.menu-open { overflow: hidden; }
 }
 
 .step {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 22px;
   padding: 28px;
   display: flex;
@@ -1465,7 +1517,7 @@ html.menu-open { overflow: hidden; }
 .step-num {
   font-size: 15px;
   font-weight: 600;
-  color: var(--red);
+  color: var(--red-text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1641,7 +1693,7 @@ html.menu-open { overflow: hidden; }
   text-decoration: none;
 }
 
-.legal-toc a:hover { color: var(--red); }
+.legal-toc a:hover { color: var(--red-text); }
 
 @media (max-width: 999px) {
   .legal-toc { display: none; }
@@ -1678,7 +1730,7 @@ html.menu-open { overflow: hidden; }
   margin-bottom: 10px;
   font-size: 14px;
   letter-spacing: 0;
-  color: var(--red);
+  color: var(--red-text);
   font-variant-numeric: tabular-nums;
 }
 
