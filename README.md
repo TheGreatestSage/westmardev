@@ -33,9 +33,13 @@ python3 -m http.server 8000
 
 ## Design tokens
 
-Light only. Colours are CSS custom properties at the top of `styles.css`, taken
-from the export; sizes keep the export's `clamp()` values and auto-fit grids,
-so layouts follow the boards at every width.
+Light by default, dark when the browser prefers dark: the site follows
+`prefers-color-scheme` and switches live, with no toggle. Colours are CSS custom
+properties at the top of `styles.css`, taken from the export; the dark
+counterpart is the `@media (prefers-color-scheme: dark)` block right after
+`:root`. The ShiftJar, Voyager, Davy Jones and Full site tiles are dark in both.
+Sizes keep the export's `clamp()` values and auto-fit grids, so layouts follow
+the boards at every width.
 
 | Token | Value | Used for |
 | --- | --- | --- |
@@ -54,7 +58,8 @@ logo included. When you change one, change all seven pages (the two under
 adds the footer's status note.
 
 In the inline logo, the WESTMAR path is `#C72020` and the LLC path is
-`fill="currentColor"`, coloured `#121212` by the surrounding CSS.
+`fill="currentColor"`, coloured `--ink` by the surrounding CSS (`#121212`,
+`#ececea` in dark).
 
 ## Behaviour (`app.js`)
 
