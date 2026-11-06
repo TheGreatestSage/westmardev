@@ -8,7 +8,7 @@ Support, Privacy, Terms, plus the shared SiteNav and SiteFooter).
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — TestFlight ribbon, hero, app tiles, why, websites promo, FAQ, contact |
+| `index.html` | Home — status ribbon, hero, app tiles, why, websites promo, FAQ, contact |
 | `websites.html` | Websites for contractors — pricing, recent work, what $99 covers |
 | `support.html` | Support — what to include, common questions |
 | `privacy.html`, `terms.html` | Legal pages with an "On this page" list on wide screens |
@@ -80,5 +80,5 @@ branch → `main` / root**.
 
 Pages under `davyjones/` sit in folders so the URLs stay clean (`/davyjones/support`)
 with no host config. That's also why they use root paths for every asset and link.
-The App Store badge is an `<a>` with no `href` until the listing is live; the
-comment above it says what to change, and the Home tile's badge changes with it.
+The App Store badge links to the live listing; the Home tile's status badge and
+"Download on the App Store" link point to the same URL.

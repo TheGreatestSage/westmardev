@@ -538,7 +538,7 @@ a:hover { color: var(--red-hover); }
 html.menu-open { overflow: hidden; }
 
 /* ==========================================================================
-   Home — TestFlight ribbon
+   Home — status ribbon
    ========================================================================== */
 
 .ribbon {
@@ -1515,8 +1515,8 @@ html.menu-open { overflow: hidden; }
   text-wrap: pretty;
 }
 
-/* App Store badge. Until the listing is live it is an <a> without an href,
-   which HTML treats as a placeholder link: shown, but not clickable. */
+/* App Store badge. On a page whose listing isn't live yet, leave the <a> without
+   an href: HTML treats that as a placeholder link, shown but not clickable. */
 .store {
   margin-top: 12px;
   display: flex;
